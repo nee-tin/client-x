@@ -3140,7 +3140,7 @@ const artistsData = {
 
 discography: [
   { title: "My Everything", meta: "Album · 2014 · 16 tracks", link: "https://music.apple.com/us/album/my-everything-bonus-tracks-edition/1440852353", cover: "assets/images/discography/my-everything.jpg" },
-  { title: "Yours Truly", meta: "Album · 2013 · 12 tracks", link: "https://music.apple.com/us/album/yours-truly-tenth-anniversary-bonus-videos-edition/1726075089", cover: "assets/images/discography/yours-truly.jpg" },
+  { title: "Yours Truly", meta: "Album · 2013 · 12 tracks", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/yours-truly.jpg" },
   { title: "No Tears Left To Cry", meta: "Single · 2018 · feat. Ariana Grande", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/no-tears-left-to-cry.webp" },
   { title: "Positions", meta: "Album · 2020 · 14 tracks", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/positions.jpg" },
   { title: "Thank U, Next", meta: "Album · 2019 · 12 tracks", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/thank-u-next.webp" },
@@ -3778,6 +3778,270 @@ function showProfile(artistKey) {
   // Update top lesson info
   // -------------------------------
   const lessonInfo = profilePage.querySelector('.lesson-info');
+  if (lessonInfo) {
+    lessonInfo.querySelector('.lesson-duration').textContent = artist.lessonDuration || '';
+    if (artist.lessonPrice) {
+      const [groupPrice, oneOnOnePrice] = artist.lessonPrice.split('/');
+      lessonInfo.querySelector('.lesson-group').textContent = groupPrice.trim();
+      lessonInfo.querySelector('.lesson-oneonone').textContent = oneOnOnePrice.trim();
+    }
+  }
+
+  // -------------------------------
+  // Populate dynamic lessons
+  // -------------------------------
+  const lessonsContainer = profilePage.querySelector('.lessons-available');
+  if (lessonsContainer) {
+    lessonsContainer.innerHTML = ''; // clear previous
+    if (artist.lessons) {
+      artist.lessons.forEach(lesson => {
+        lessonsContainer.innerHTML += `
+          <div class="lesson-item">
+            <div>
+              <div class="lesson-type">${lesson.title}</div>
+              <div class="lesson-detail">${lesson.detail}</div>
+            </div>
+            <div class="lesson-price">
+              <div class="lesson-price-val">${lesson.price}</div>
+              <div class="lesson-price-unit">${lesson.unit}</div>
+            </div>
+          </div>
+        `;
+      });
+    }
+  }
+
+  // -------------------------------
+  // Populate dynamic discography
+  // -------------------------------
+  const discoContainer = profilePage.querySelector('.discography');
+  if (discoContainer) {
+    discoContainer.innerHTML = ''; // clear previous
+    if (artist.discography) {
+      artist.discography.forEach(item => {
+        discoContainer.innerHTML += `
+          <div class="discography-item">
+            <div class="disco-cover grad-1">
+              ${item.cover ? `<img src="${item.cover}" alt="${item.title}" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" />` : '💿'}
+            </div>
+            <div class="disco-info">
+              <div class="disco-title">${item.title}</div>
+              <div class="disco-meta">${item.meta}</div>
+            </div>
+          <a href="${item.link}" target="_blank" class="disco-apple">
+            <img src="assets/images/icons/icn8-apple-100.png" 
+               alt="Apple Music" 
+             style="width:24px; height:24px; vertical-align:middle; margin-right:6px;" />
+                Listen
+              </a>
+          </div>
+        `;
+      });
+    }
+  }
+
+  // -------------------------------
+  // Show profile page
+  // -------------------------------
+  showPage('profile');
+}
+/* =========================================
+   LOAD MORE ARTISTS
+========================================= */
+
+function loadMoreArtists(button){
+
+    document
+        .querySelectorAll('.hidden-artist')
+        .forEach(card => {
+
+            card.style.display = 'block';
+
+            card.classList.remove('hidden-artist');
+
+        });
+
+    /* Hide button after click */
+
+    button.style.display = 'none';
+
+}
+
+/* =========================================
+   AVAILABILITY SLOT SELECTION
+========================================= */
+
+document
+    .querySelectorAll('.avail-slot:not(.taken)')
+    .forEach(slot => {
+
+        slot.addEventListener('click', function() {
+
+            document
+                .querySelectorAll('.avail-slot')
+                .forEach(s => s.classList.remove('selected'));
+
+            this.classList.add('selected');
+
+            this.textContent =
+                this.textContent.replace(' ✓','') + ' ✓';
+
+        });
+
+});
+
+function completeBooking(){
+
+    alert(
+      "✅ Payment Request Accepted!\n\nYour lesson booking has been submitted successfully."
+    );
+
+}
+
+function subscribeNow() {
+  alert("✅ Thanks for subscribing!");
+}
+
+function artistApply() {
+  alert("✅ Artist application request submitted!");
+}
+
+</script>
+
+</body>
+ profilePage.querySelector('.lesson-info');
+  if (lessonInfo) {
+    lessonInfo.querySelector('.lesson-duration').textContent = artist.lessonDuration || '';
+    if (artist.lessonPrice) {
+      const [groupPrice, oneOnOnePrice] = artist.lessonPrice.split('/');
+      lessonInfo.querySelector('.lesson-group').textContent = groupPrice.trim();
+      lessonInfo.querySelector('.lesson-oneonone').textContent = oneOnOnePrice.trim();
+    }
+  }
+
+  // -------------------------------
+  // Populate dynamic lessons
+  // -------------------------------
+  const lessonsContainer = profilePage.querySelector('.lessons-available');
+  if (lessonsContainer) {
+    lessonsContainer.innerHTML = ''; // clear previous
+    if (artist.lessons) {
+      artist.lessons.forEach(lesson => {
+        lessonsContainer.innerHTML += `
+          <div class="lesson-item">
+            <div>
+              <div class="lesson-type">${lesson.title}</div>
+              <div class="lesson-detail">${lesson.detail}</div>
+            </div>
+            <div class="lesson-price">
+              <div class="lesson-price-val">${lesson.price}</div>
+              <div class="lesson-price-unit">${lesson.unit}</div>
+            </div>
+          </div>
+        `;
+      });
+    }
+  }
+
+  // -------------------------------
+  // Populate dynamic discography
+  // -------------------------------
+  const discoContainer = profilePage.querySelector('.discography');
+  if (discoContainer) {
+    discoContainer.innerHTML = ''; // clear previous
+    if (artist.discography) {
+      artist.discography.forEach(item => {
+        discoContainer.innerHTML += `
+          <div class="discography-item">
+            <div class="disco-cover grad-1">
+              ${item.cover ? `<img src="${item.cover}" alt="${item.title}" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" />` : '💿'}
+            </div>
+            <div class="disco-info">
+              <div class="disco-title">${item.title}</div>
+              <div class="disco-meta">${item.meta}</div>
+            </div>
+          <a href="${item.link}" target="_blank" class="disco-apple">
+            <img src="assets/images/icons/icn8-apple-100.png" 
+               alt="Apple Music" 
+             style="width:24px; height:24px; vertical-align:middle; margin-right:6px;" />
+                Listen
+              </a>
+          </div>
+        `;
+      });
+    }
+  }
+
+  // -------------------------------
+  // Show profile page
+  // -------------------------------
+  showPage('profile');
+}
+/* =========================================
+   LOAD MORE ARTISTS
+========================================= */
+
+function loadMoreArtists(button){
+
+    document
+        .querySelectorAll('.hidden-artist')
+        .forEach(card => {
+
+            card.style.display = 'block';
+
+            card.classList.remove('hidden-artist');
+
+        });
+
+    /* Hide button after click */
+
+    button.style.display = 'none';
+
+}
+
+/* =========================================
+   AVAILABILITY SLOT SELECTION
+========================================= */
+
+document
+    .querySelectorAll('.avail-slot:not(.taken)')
+    .forEach(slot => {
+
+        slot.addEventListener('click', function() {
+
+            document
+                .querySelectorAll('.avail-slot')
+                .forEach(s => s.classList.remove('selected'));
+
+            this.classList.add('selected');
+
+            this.textContent =
+                this.textContent.replace(' ✓','') + ' ✓';
+
+        });
+
+});
+
+function completeBooking(){
+
+    alert(
+      "✅ Payment Request Accepted!\n\nYour lesson booking has been submitted successfully."
+    );
+
+}
+
+function subscribeNow() {
+  alert("✅ Thanks for subscribing!");
+}
+
+function artistApply() {
+  alert("✅ Artist application request submitted!");
+}
+
+</script>
+
+</body>
+ profilePage.querySelector('.lesson-info');
   if (lessonInfo) {
     lessonInfo.querySelector('.lesson-duration').textContent = artist.lessonDuration || '';
     if (artist.lessonPrice) {
