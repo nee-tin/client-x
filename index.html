@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zinkly – Learn Music From the Best</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Montserrat&family=Lato&family=Nunito&display=swap" rel="stylesheet">
 <style>
 /* ─── RESET & BASE ─────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -461,6 +463,122 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 3
 .social-links{display:flex;gap:16px}
 .social-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;transition:all .2s;cursor:pointer}
 .social-btn:hover{border-color:var(--gold);background:rgba(245,166,35,0.1)}
+ 
+/*body {
+      margin:0;
+      font-family: 'Poppins', sans-serif;
+      background:#f5f5f5;
+      color:#333;
+    }
+    a { text-decoration:none; }   */
+
+   
+
+    /* Latest News Section */
+     .neus {
+      display: inline-flex;   /* make links align horizontally */
+      gap: 40px;              /* adjust this for big space */
+      align-items: center;    /* vertical alignment */
+      }
+
+    .news-card {
+  display: inline-block;
+   
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+  margin: 10px;
+  margin-top: 50px;
+  width: 450px;
+  padding-left: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+
+  /* shift right */
+  margin-left: 60px; /* increase for more right spacing */
+}
+    
+    .news-card img {
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+    .news-card .news-body {
+      padding:16px;
+    }
+    .news-card .news-body h3 {
+      margin:0 0 6px 0;
+      font-size:1.1em;
+    }
+    .news-card .news-body p {
+      font-size:0.9em;
+      color:#e99c0d;
+    }
+    .news-card .news-body .btn-read {
+      display:inline-block;
+      margin-top:10px;
+      font-size:0.85em;
+      color:#4facfe;
+      font-weight:600;
+    }
+
+   /* Gradient subscribe CTA - dark version */
+.subscribe-cta {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0f0e1c 0%, #2c2a3c 100%); /* dark gradient */
+  text-align: center;
+  color: #fff;
+}
+
+.subscribe-cta h2 {
+  font-size: 2em;
+  margin-bottom: 12px;
+  color: #f0f0f0;
+}
+
+.subscribe-cta p {
+  font-size: 1em;
+  margin-bottom: 26px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Subtle Glow for Subscribe Button */
+.subscribe-cta .btn-subscribe {
+  display: inline-block;
+  background: oklab(77.793% 0.05185 0.15807);      /* bright button */
+  color: #030303;             /* dark text */
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* normal shadow */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease, box-shadow 0.4s ease, text-shadow 0.4s ease;
+}
+
+/* Hover effect: subtle lift + gentle glow */
+.subscribe-cta .btn-subscribe:hover {
+  transform: translateY(-3px);  /* slightly lift */
+  box-shadow: 0 8px 18px rgba(243, 160, 7, 0.5), /* subtle orange glow */
+              0 0 12px rgba(243, 160, 7, 0.3);  /* softer outer glow */
+  text-shadow: 0 0 4px rgba(243, 160, 7, 0.5); /* faint glow on text */
+}
+
+/* Optional: very gentle pulse */
+@keyframes subtlePulseGlow {
+  0% { box-shadow: 0 8px 18px rgba(243,160,7,0.5), 0 0 12px rgba(243,160,7,0.3); }
+  50% { box-shadow: 0 8px 18px rgba(243,160,7,0.6), 0 0 15px rgba(243,160,7,0.35); }
+  100% { box-shadow: 0 8px 18px rgba(243,160,7,0.5), 0 0 12px rgba(243,160,7,0.3); }
+}
+
+.subscribe-cta .btn-subscribe:hover {
+  animation: subtlePulseGlow 1.5s infinite;
+}
+
+
 
 /* ─── PAGE 2: ARTISTS ───────────────────────────── */
 .page-hero{padding:140px 0 80px;text-align:center;position:relative}
@@ -472,7 +590,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 3
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
-  margin-top: 60px;
+  margin-top: 66px;
+  padding-top: 20px;
 }
 
 .artist-card {
@@ -483,6 +602,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 3
 
 .artist-avatar {
   height: 240px;    
+}
+
+/*java-bio-paragraphs-styling*/
+.profile-bio p {
+  margin-bottom: 16px; /* space between paragraphs */
+  line-height: 1.6;    /* makes text easier to read */
 }
 
 /* ─── PAGE 3: ARTIST PROFILE ───────────────────── */
@@ -498,6 +623,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 3
 .profile-info-name{font-family:var(--font-display);font-size:clamp(48px,6vw,80px);letter-spacing:1px;line-height:1}
 .profile-genre-tags{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
 .profile-bio{color:var(--muted);font-size:16px;line-height:1.8;max-width:560px}
+.profile-bio {
+  text-align: justify;        /* Justifies the text both left & right */
+  line-height: 1.6;           /* Space between lines */
+  margin-bottom: 16px;        /* Space below paragraphs */
+  font-size: 1em;             /* Adjust font size if needed */
+  color: #f0f0f0;             /* Light color for readability on dark background */
+  text-justify: inter-word;   /* Ensures even spacing between words */
+}
 .profile-actions{display:flex;gap:16px;margin-top:32px;flex-wrap:wrap}
 .profile-sections{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:60px;padding-bottom:80px}
 .profile-section-full{grid-column:1/-1}
@@ -768,25 +901,46 @@ textarea.form-control{resize:none;height:130px}
 
 }
 
+.nav-links {
+  display: flex;          /* horizontal layout */
+  gap: 38px;              /* space between nav items on desktop */
+  align-items: center;    /* vertically align buttons */
+}
+
 
 /* MOBILE */
 
 @media(max-width:600px){
-
-  nav{
-    padding:16px 20px;
+  .nav-links {
+    display: none;          /* hide by default on small screens */
+    flex-direction: column;
+    gap:12px;
+    background:#111;
+    padding:16px;
+    position:absolute;
+    top:60px;               /* adjust for nav height */
+    right:20px;
+    border-radius:12px;
+    z-index:100;
   }
 
- .nav-logo,
- .logo{
-   font-size:28px;
-}
-
-  .nav-cta{
+    .nav-cta {
+    margin-top:10px;
     padding:8px 16px;
-   font-size:13px;
+    font-size:13px;
   }
 
+  /* Show nav when active */
+  .nav-links.active {
+    display:flex;
+  }
+
+  .menu-toggle {
+    display:block;
+    cursor:pointer;
+    font-size:24px;
+    color:#fff;
+  }
 }
 
 @media(max-width:480px){
@@ -814,9 +968,38 @@ textarea.form-control{resize:none;height:130px}
   .artists-grid,
   .steps-grid{
     grid-template-columns:1fr;
-  }
-  
+  } 
  
+}
+ 
+  /* Full-screen width section with rounded background */
+.zinkly-rounded-bg {
+  width: 100%; /* or any width smaller than screen */
+  padding-top: 12px;
+  display: flex;
+  justify-content: center; /* align text to left inside the container */
+  background: #01000e;
+  border-radius: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+   
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.zinkly-rounded-text {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.3em;           /* larger font */
+  font-family:'Roboto', 'Helvetica', 'Arial', sans-serif;  /* stylish modern font */
+  font-weight: 600;            /* bold for impact */
+  letter-spacing: 1.2px;       /* spaced letters for elegance */
+  line-height: 1.8;
+  color: rgba(185, 183, 203, 0.986);     /* gold text */
+  text-shadow: none;           /* remove all glow/blurry effect */
 }
 
 </style>
@@ -833,41 +1016,25 @@ textarea.form-control{resize:none;height:130px}
     ZINKLY
   </div>
 
-  <!-- RIGHT SIDE -->
-  <div class="nav-right">
+<!-- RIGHT SIDE -->
+<div class="nav-right">
 
-    <!-- NAV LINKS -->
-    <div class="nav-links">
-      <button onclick="showPage('home')" class="active" id="nav-home">
-        Home
-      </button>
-
-      <button onclick="showPage('artists')" id="nav-artists">
-        Artists
-      </button>
-
-      <button onclick="showPage('profile')" id="nav-profile">
-        Artist Profile
-      </button>
-
-      <button onclick="showPage('how')" id="nav-how">
-        How It Works
-      </button>
-
-      <button onclick="showPage('contact')" id="nav-contact">
-        Contact
-      </button>
-    </div>
-
-    <!-- CTA -->
-    <button onclick="showPage('booking')" class="nav-cta">
-      Book a Lesson
-    </button>
-
-    <!-- HAMBURGER -->
-    <div class="menu-toggle">☰</div>
-
+  <!-- NAV LINKS -->
+  <div class="nav-links">
+    <button onclick="showPage('home')" class="active" id="nav-home">Home</button>
+    <button onclick="showPage('artists')" id="nav-artists">Artists</button>
+    <button onclick="showPage('profile')" id="nav-profile">Artist Profile</button>
+    <button onclick="showPage('how')" id="nav-how">How It Works</button>
+    <button onclick="showPage('contact')" id="nav-contact">Contact</button>
   </div>
+
+  <!-- CTA -->
+  <button onclick="showPage('booking')" class="nav-cta">Book a Lesson</button>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle">☰</div>
+
+</div>
 
 </nav>
 
@@ -1303,6 +1470,15 @@ textarea.form-control{resize:none;height:130px}
     </div>
   </section>
   <div class="container" style="padding-bottom:80px">
+ 
+<!-- ZINKLY INTRO WITH FULL-WIDTH ROUNDED BACKGROUND -->
+<section class="zinkly-rounded-bg">
+  <div class="zinkly-rounded-text">
+  These are the artists that inspire Zinkly ! They embody creativity, innovation, and pure musical passion.
+  They are shaping the soundtrack of today and inspiring tomorrow’s music icons !
+  </div>
+</section>
+
    <div class="artists-grid">
 
   <!-- SINGING -->
@@ -1313,7 +1489,7 @@ textarea.form-control{resize:none;height:130px}
   <div class="artist-img-wrap">
     <div class="artist-avatar grad-1" style="height:240px">
       <img src="assets/images/artists/ariana-2.jpg" 
-           alt="Ariana Nova" 
+           alt="Ariana" 
            style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
     </div>
   </div>
@@ -1381,11 +1557,14 @@ textarea.form-control{resize:none;height:130px}
 </div>
 
 
+
+
+
 <!-- MILEY CYRUS-->
 <div class="artist-card artist-focus" data-category="singing" onclick="showProfile('miley')">
   <div class="artist-img-wrap">
     <div class="artist-avatar grad-1" style="height:240px">
-      <img src="assets/images/artists/miley-2.jpg" alt="Selena Gomez" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+      <img src="assets/images/artists/miley-2.png" alt="Selena Gomez" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
     </div>
   </div>
   <div class="artist-info">
@@ -1402,6 +1581,176 @@ textarea.form-control{resize:none;height:130px}
     </div>
   </div>
 </div>
+
+
+<!-- TYLER-->
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('tyler')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/tyler-2.avif" alt="tyler" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+  <div class="artist-info">
+   <div class="artist-name">Tyler The Creator</div>
+    <div class="artist-genre">Vocal ·Rapper / Record producer</div>
+     <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink">Hip Hop Rap</span>
+    </div>
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>4.99</strong> Rating</div>
+      <div class="artist-stat"><strong>1.5K</strong> Students</div>
+      <div class="artist-stat"><strong>$4,000</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+
+<!--Jcole---->
+
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('jcole')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/j-cole-2.jpg" alt="xibit" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+  <div class="artist-info">
+    <div class="artist-name">J Cole</div>
+    <div class="artist-genre">Hip-Hop/Rap </div>
+     <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink">Singer/Rapper Grammy Nom.</span>
+    </div>
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>4.2</strong> Rating</div>
+      <div class="artist-stat"><strong>1K</strong> Students</div>
+      <div class="artist-stat"><strong>$1,500</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+<!--XIHIBIT---->
+
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('xihibit')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/xihibit-2.jpg" alt="xibit" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+  <div class="artist-info">
+    <div class="artist-name">Xihibit</div>
+    <div class="artist-genre">Hip-Hop/Rap </div>
+     <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink"> Icon</span>
+    </div>
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>3.99</strong> Rating</div>
+      <div class="artist-stat"><strong>1K</strong> Students</div>
+      <div class="artist-stat"><strong>$1,000</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+<!-- SABRINA  --->
+
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('sabrina')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/sabrina-2.webp" alt="sabrina" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+  <div class="artist-info">
+    <div class="artist-name">Sabrina Carpenter</div>
+    <div class="artist-genre">Vocal · Pop/Country </div>
+     <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink">Pop Icon</span>
+    </div>
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>4.99</strong> Rating</div>
+      <div class="artist-stat"><strong>1.5K</strong> Students</div>
+      <div class="artist-stat"><strong>$3,000</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ELLIE GOULDING  --->
+
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('ellie')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/ellie.jpg" alt="ellie" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+  <div class="artist-info">
+    <div class="artist-name">ELLIE GOULDING</div>
+    <div class="artist-genre">Vocal · Pop/rock </div>
+     <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink">Pop Icon</span>
+    </div>
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>4.99</strong> Rating</div>
+      <div class="artist-stat"><strong>2K</strong> Students</div>
+      <div class="artist-stat"><strong>$3,000</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- KENDRICK LAMAR  --->
+
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('kendrick')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/kendrik-2.jpg" alt="ken" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+  <div class="artist-info">
+    <div class="artist-name">Kendrick Lamar</div>
+    <div class="artist-genre">Vocal/R&B</div>
+     <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink">Icon</span>
+    </div>
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>2.99</strong> Rating</div>
+      <div class="artist-stat"><strong>1.5K</strong> Students</div>
+      <div class="artist-stat"><strong>$3,000</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Tate McRae TMac  --->
+
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('tate')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/Tate-McRae-TMac-2.jpg" alt="ken" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+  <div class="artist-info">
+    <div class="artist-name">Tate McRae TMac</div>
+    <div class="artist-genre">Vocal/Pop </div>
+     <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink">Pop Icon</span>
+    </div>
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>4.99</strong> Rating</div>
+      <div class="artist-stat"><strong>1.5K</strong> Students</div>
+      <div class="artist-stat"><strong>$3,200</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <!-- OLIVIA RODRIGO -->
 <div class="artist-card artist-focus" data-category="singing" onclick="showProfile('olivia')">
@@ -1866,6 +2215,7 @@ textarea.form-control{resize:none;height:130px}
       </div>
       <!-- RIGHT: Info -->
       <div>
+   
         <div class="section-label" style="margin-bottom:12px">Grammy Nominated Vocal Artist</div>
         <div class="profile-info-name">ARIANA<br>GRANDE</div>
         <div class="profile-genre-tags">
@@ -1889,6 +2239,13 @@ textarea.form-control{resize:none;height:130px}
           <button class="btn-primary" onclick="showPage('booking')">✦ Book a Lesson</button>
           <button class="btn-outline">📩 Send Message</button>
           <button class="btn-outline">❤️ Follow</button>
+            <a href="https://www.instagram.com/zinklylive/" target="_blank" class="btn-outline" 
+                 style="font-size:14px; padding:6px 12px; display:inline-flex; align-items:center;">
+              <img src="assets/images/icons/ns8-instagram-logo.png" 
+                   alt="Instagram" 
+                  style="width:28px; height:28px; margin-right:6px;" />
+                  Instagram
+             </a>
         </div>
         <div style="display:flex;gap:30px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)">
           <div><div style="font-size:12px;color:var(--muted)">Response Rate</div><div style="font-weight:700;margin-top:4px">98%</div></div>
@@ -1900,75 +2257,33 @@ textarea.form-control{resize:none;height:130px}
     </div>
 
     <!-- DETAIL SECTIONS -->
-    <div class="profile-sections">
-      <!-- Lessons Available -->
-      <div class="section-box">
-        <div class="section-box-header">
-          <div class="section-box-title">🎓 Lessons Available</div>
-          <button class="btn-primary" style="font-size:12px;padding:8px 20px" onclick="showPage('booking')">Book Now</button>
-        </div>
-        <div class="section-box-body">
-          <div class="lesson-item">
-            <div><div class="lesson-type">1-on-1 Vocal Session</div><div class="lesson-detail">60 min · Online · Personalized feedback</div></div>
-            <div class="lesson-price"><div class="lesson-price-val">₹2,400</div><div class="lesson-price-unit">per session</div></div>
-          </div>
-          <div class="lesson-item">
-            <div><div class="lesson-type">Group Masterclass</div><div class="lesson-detail">90 min · Online · Up to 8 students</div></div>
-            <div class="lesson-price"><div class="lesson-price-val">₹800</div><div class="lesson-price-unit">per student</div></div>
-          </div>
-          <div class="lesson-item">
-            <div><div class="lesson-type">Monthly Mentorship</div><div class="lesson-detail">4 sessions/mo · + WhatsApp feedback</div></div>
-            <div class="lesson-price"><div class="lesson-price-val">₹7,500</div><div class="lesson-price-unit">per month</div></div>
-          </div>
-          <div class="lesson-item" style="border-bottom:none">
-            <div><div class="lesson-type">Career Strategy Session</div><div class="lesson-detail">45 min · Industry advice + review</div></div>
-            <div class="lesson-price"><div class="lesson-price-val">₹3,200</div><div class="lesson-price-unit">per session</div></div>
-          </div>
-        </div>
-      </div>
+<div class="profile-sections">
 
-      <!-- Discography -->
-      <div class="section-box">
-        <div class="section-box-header">
-          <div class="section-box-title">🎵 Discography</div>
-          <span class="tag tag-gold">Stream on Apple Music</span>
-        </div>
-        <div class="section-box-body">
-          <div class="discography-item">
-            <div class="disco-cover grad-1">💿</div>
-            <div class="disco-info">
-              <div class="disco-title">Golden Hours</div>
-              <div class="disco-meta">Album · 2024 · 14 tracks</div>
-            </div>
-            <a href="https://music.apple.com" target="_blank" class="disco-apple"><span class="apple-icon">🍎</span> Listen</a>
-          </div>
-          <div class="discography-item">
-            <div class="disco-cover grad-5">🎵</div>
-            <div class="disco-info">
-              <div class="disco-title">Midnight Fire</div>
-              <div class="disco-meta">Single · 2023 · feat. DJ Voltz</div>
-            </div>
-            <a href="https://music.apple.com" target="_blank" class="disco-apple"><span class="apple-icon">🍎</span> Listen</a>
-          </div>
-          <div class="discography-item">
-            <div class="disco-cover grad-8">🎶</div>
-            <div class="disco-info">
-              <div class="disco-title">Soul Revival EP</div>
-              <div class="disco-meta">EP · 2022 · 6 tracks</div>
-            </div>
-            <a href="https://music.apple.com" target="_blank" class="disco-apple"><span class="apple-icon">🍎</span> Listen</a>
-          </div>
-          <div class="discography-item">
-            <div class="disco-cover grad-3">🎼</div>
-            <div class="disco-info">
-              <div class="disco-title">Rise (Debut Album)</div>
-              <div class="disco-meta">Album · 2020 · 12 tracks</div>
-            </div>
-            <a href="https://music.apple.com" target="_blank" class="disco-apple"><span class="apple-icon">🍎</span> Listen</a>
-          </div>
-        </div>
-      </div>
+  <!-- Lessons Available -->
+  <div class="section-box">
+    <div class="section-box-header">
+      <div class="section-box-title">🎓 Lessons Available</div>
+      <button class="btn-primary" style="font-size:12px;padding:8px 20px" onclick="showPage('booking')">
+        Book Now
+      </button>
+    </div>
+    <div class="section-box-body lessons-available">
+      <!-- JS will insert lesson items here -->
+    </div>
+  </div>
 
+  <!-- Discography -->
+  <div class="section-box">
+    <div class="section-box-header">
+      <div class="section-box-title">🎵 Discography</div>
+      <span class="tag tag-gold">Stream on Apple Music</span>
+    </div>
+    <div class="section-box-body discography">
+      <!-- JS will insert discography items here -->
+    </div>
+  </div>
+
+</div>
       <!-- Reviews -->
       <div class="section-box profile-section-full">
         <div class="section-box-header">
@@ -2101,7 +2416,7 @@ textarea.form-control{resize:none;height:130px}
             <div class="summary-artist">
               <div class="summary-avatar grad-1">🎤</div>
               <div>
-                <div class="summary-artist-name">ARIA NOVA</div>
+                <div class="summary-artist-name">ARIANA GRANDE</div>
                 <div class="summary-artist-genre">Vocal · R&B / Soul</div>
                 <div style="display:flex;gap:4px;margin-top:6px;color:var(--gold);font-size:12px">★★★★★ <span style="color:var(--muted)">4.98</span></div>
               </div>
@@ -2441,6 +2756,32 @@ textarea.form-control{resize:none;height:130px}
 </button>
 
 </form>
+   
+  <!-- Gradient Subscribe CTA -->
+   
+  <div class="subscribe-cta">
+    <h2>SUBSCRIBE TO THE NEWSLETTER</h2>
+    <p>Get the latest lessons, artist tips, and news delivered straight to your inbox.</p>
+    <a href="#" class="btn-subscribe">✦ Subscribe Now</a>
+  </div>
+
+
+    <!-- News Card -->
+    <div class="news-card">
+    <img src="assets/images/icons/ns-ltr.jpg" 
+     alt="Featured News" 
+     style="width:150px; height:auto; border-radius:12px;">
+      <div class="news-body">
+        <h3>HELLO ZINKLY</h3>
+        <p>Classic with your favorite color.</p>
+        
+        <span class="neus">
+          <a href="#" class="btn-read">READ MORE »</a>
+           <a href="#" class="btn-read">LATEST NEWS »</a>
+        </span>
+       </div>
+    </div>
+  </div>
 
   <!-- FOOTER (reused) -->
   <footer>
@@ -2466,6 +2807,7 @@ textarea.form-control{resize:none;height:130px}
       </div>
     </div>
   </footer>
+
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -2476,6 +2818,14 @@ textarea.form-control{resize:none;height:130px}
 ========================================= -->
 
 <script>
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 
 /* =========================================
    PAGE SWITCHING SYSTEM
@@ -2758,128 +3108,641 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
    ARTISTS DATA
 ========================================= */
 const artistsData = {
-  ariana: {
-    name: "Ariana Grande",
-    profileImg: "assets/images/artists/ariana-grande.jpg",
-    bio: `
-      Learn singing breath control with Ariana Grande. Learn from the best.
-      Get 1-on-1 or group coaching from the top pop singer. You will learn
-      techniques, stage presence, songwriting, and music production tips.
-      Ariana is also a top producer.<br><br>
-      Songwriting with Ariana Grande.
-    `,
-    lessonDuration: "25 minutes",
-    lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
-    categories: ["Singing", "Songwriting", "Producing", "Stage presence"]
-  },
-  taylor: {
-    name: "Taylor Swift",
-    profileImg: "assets/images/artists/taylor-swift.jpg",
-    bio: `
-      Learn singing, songwriting, and stage performance with Taylor Swift.
-      Personalized coaching to improve technique, performance, and song creation.
-      Tips on music production and storytelling.<br><br>
-    `,
-    lessonDuration: "30 minutes",
-    lessonPrice: "Group: $2,500 / 1-on-1: $3,500",
-    categories: ["Singing", "Songwriting", "Stage presence", "Producing"]
-  },
-
-  miley: {
-    name: "Miley Cyrus",
-    profileImg: "assets/images/artists/miley-cyrus.jpg",
-    bio: `
-      Learn singing, pop, and rock performance with Miley Cyrus. She will teach vocal technique, stage presence, and music production tips.
-      Get insights from her multi-genre career and live performance expertise.
-    `,
-    lessonDuration: "30 minutes",
-    lessonPrice: "Group: $4,200 / 1-on-1: $5,000",
-    categories: ["Singing", "Pop / Rock", "Stage Presence", "Producing"]
-  },
-
-selena: {
-  name: "Selena Gomez",
-  profileImg: "assets/images/artists/selena-gomez.jpg", // main profile image
+ ariana: {
+  name: "Ariana Grande",
+  profileImg: "assets/images/artists/ariana-grande.jpg",
   bio: `
-    Learn singing and stage performance with Selena Gomez. Get tips on breath control,
-    vocal technique, and stage presence. She will also guide you in songwriting
-    and music production basics.<br><br>
-    Personalized 1-on-1 or group coaching to improve your performance and confidence.
+    <p><strong>Career & Background :</strong><br>
+    Ariana Grande is a multi-platinum pop and R&B superstar, known for her incredible vocal range,
+    powerhouse performances, and songwriting skills. She began on Broadway and Nickelodeon and quickly
+    became one of the most influential artists of her generation. Aspiring singers can learn breath control,
+    pitch accuracy, and stage presence directly from her lessons.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Ariana has won numerous awards including 2 Grammys, 3 American Music Awards, 9 MTV Video Music Awards,
+    and multiple Guinness World Records for her vocal achievements. She has also been nominated for
+    Billboard Music Awards and recognized for her philanthropic work and influence on pop culture.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Some of her biggest hits include "Thank U, Next", "No Tears Left to Cry", "Positions", "Into You",
+    and "Problem". She has headlined global tours, performed at the Grammy Awards, and sold out iconic venues
+    like Madison Square Garden multiple times.</p>
+  `,
+  lessonDuration: "25 minutes",
+  lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
+  categories: ["Singing", "Songwriting", "Producing", "Stage presence"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Session", detail: "60 min · Online · Personalized feedback", price: "₹4,000", unit: "per session" },
+    { title: "Group Masterclass", detail: "90 min · Online · Up to 8 students", price: "₹3,000", unit: "per student" },
+    { title: "Songwriting Workshop", detail: "45 min · Focus on structure & hooks", price: "₹2,500", unit: "per session" }
+  ],
+
+discography: [
+  { title: "My Everything", meta: "Album · 2014 · 16 tracks", link: "https://music.apple.com/us/album/my-everything-bonus-tracks-edition/1440852353", cover: "assets/images/discography/my-everything.jpg" },
+  { title: "Yours Truly", meta: "Album · 2013 · 12 tracks", link: "https://music.apple.com/us/album/yours-truly-tenth-anniversary-bonus-videos-edition/1726075089", cover: "assets/images/discography/yours-truly.jpg" },
+  { title: "No Tears Left To Cry", meta: "Single · 2018 · feat. Ariana Grande", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/no-tears-left-to-cry.webp" },
+  { title: "Positions", meta: "Album · 2020 · 14 tracks", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/positions.jpg" },
+  { title: "Thank U, Next", meta: "Album · 2019 · 12 tracks", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/thank-u-next.webp" },
+  { title: "Sweetener", meta: "Album · 2018 · 15 tracks", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/sweetener.jpg" },
+  { title: "Dangerous Woman", meta: "Album · 2016 · 12 tracks", link: "https://music.apple.com/us/artist/ariana-grande/412778295", cover: "assets/images/discography/dangerous-woman.jpg" }
+
+]
+},
+
+
+  tyler: {
+  name: "Tyler, The Creator",
+  profileImg: "assets/images/artists/tyler.webp",
+  bio: `
+    Tyler, The Creator is an acclaimed rapper, singer, songwriter, and producer known for his 
+    boundary-pushing music, unique style, and creative vision. With multiple Grammy awards, 
+    Tyler has redefined modern hip-hop and alternative music, blending soulful melodies with 
+    raw storytelling and avant-garde production.<br><br>
+
+    Fans and aspiring artists can learn about his approach to songwriting, beat-making, and 
+    stage performance. Tyler's lessons cover lyrical composition, vocal experimentation, 
+    production techniques, and how to craft a distinctive artistic identity.<br><br>
+    He has headlined festivals like Coachella and Rolling Loud, collaborated with top artists 
+    across genres, and launched his own creative collectives. Tyler brings an insider’s view 
+    of the music industry, giving students not only technical knowledge but also insight into 
+    artistic branding, stage presence, and music entrepreneurship.
+  `,
+  lessonDuration: "40 minutes",
+  lessonPrice: "Group: $3,500 / 1-on-1: $4,500",
+  categories: ["Singing", "Songwriting", "Producing", "Stage presence", "Hip-Hop"],
+
+  lessons: [
+    { title: "1-on-1 Songwriting Session", detail: "40 min · Online · Personalized feedback", price: "₹4,500", unit: "per session" },
+    { title: "Group Beat Production Workshop", detail: "90 min · Online · Up to 6 students", price: "₹3,500", unit: "per student" },
+    { title: "Performance & Stage Presence", detail: "45 min · Focus on live performance and persona", price: "₹3,800", unit: "per session" }
+  ],
+
+ discography: [
+  { title: "Call Me If You Get Lost", meta: "Album · 2021 · 16 tracks", link: "https://music.apple.com/us/artist/tyler-the-creator/420368335", cover: "assets/images/discography/tyler/callmeifyougetlost.webp" },
+  { title: "IGOR", meta: "Album · 2019 · 12 tracks", link: "https://music.apple.com/us/artist/tyler-the-creator/420368335", cover: "assets/images/discography/tyler/igor.jpg" },
+  { title: "Flower Boy", meta: "Album · 2017 · 14 tracks", link: "https://music.apple.com/us/artist/tyler-the-creator/420368335", cover: "assets/images/discography/tyler/flower-boy.webp" },
+  { title: "Cherry Bomb", meta: "Album · 2015 · 13 tracks", link: "https://music.apple.com/us/artist/tyler-the-creator/420368335", cover: "assets/images/discography/tyler/Cherry-bomb.webp" },
+  { title: "Goblin", meta: "Album · 2011 · 14 tracks", link: "https://music.apple.com/us/artist/tyler-the-creator/420368335", cover: "assets/images/discography/tyler/goblin.jpg" }
+]
+},
+
+
+kendrick: {
+  name: "Kendrick Lamar",
+  profileImg: "assets/images/artists/kendrik.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Kendrick Lamar is an American rapper, songwriter, and producer widely regarded as one of the most 
+    influential hip-hop artists of his generation. Known for his lyrical depth, storytelling, and social commentary, 
+    Kendrick has redefined modern hip-hop.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Kendrick has won 14 Grammy Awards, 1 Pulitzer Prize for Music, and multiple BET Awards. 
+    He has headlined global tours and is considered a critical voice in contemporary music.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Famous songs include "HUMBLE.", "Alright", "DNA.", and "King Kunta". Kendrick has released classic albums 
+    like "DAMN.", "To Pimp a Butterfly", and "good kid, m.A.A.d city".
+    </p>
+  `,
+  lessonDuration: "40 minutes",
+  lessonPrice: "Group: $3,500 / 1-on-1: $4,500",
+  categories: ["Rap", "Songwriting", "Producing", "Stage presence"],
+
+  lessons: [
+    { title: "1-on-1 Rap & Vocal Coaching", detail: "40 min · Online · Lyrical mastery", price: "₹4,500", unit: "per session" },
+    { title: "Songwriting & Production", detail: "45 min · Online · Beat & lyric creation", price: "₹4,000", unit: "per session" },
+    { title: "Stage Performance & Persona", detail: "40 min · Online · Stage presence techniques", price: "₹4,000", unit: "per session" }
+  ],
+
+ discography: [
+  { title: "DAMN.", meta: "Album · 2017 · 14 tracks", link: "https://music.apple.com/us/artist/kendrick-lamar/368183298", cover: "assets/images/discography/kendrick-lamar/damn.webp" },
+  { title: "To Pimp a Butterfly", meta: "Album · 2015 · 16 tracks", link: "https://music.apple.com/us/artist/kendrick-lamar/368183298", cover: "assets/images/discography/kendrick-lamar/to-pimp-a-butterfly.webp" },
+  { title: "good kid, m.A.A.d city", meta: "Album · 2012 · 16 tracks", link: "https://music.apple.com/us/artist/kendrick-lamar/368183298", cover: "assets/images/discography/kendrick-lamar/good-kid.jpg" }
+]
+},
+
+
+xihibit: {
+  name: "Xhibit",
+  profileImg: "assets/images/artists/xihibit-2.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Xhibit is an emerging artist blending contemporary R&B, hip-hop, and pop influences. Known for 
+    dynamic performances and songwriting, Xhibit has been gaining recognition in the music industry 
+    for their creative sound and engaging performances.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Xhibit has been nominated for local music awards and recognized for viral tracks and social media engagement.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Notable songs include "Vibe Check", "Late Nights", and "City Lights". Xhibit is performing in festivals 
+    and continues to build a global fanbase.
+    </p>
+  `,
+  lessonDuration: "25 minutes",
+  lessonPrice: "Group: $2,000 / 1-on-1: $2,500",
+  categories: ["Singing", "Songwriting", "Stage presence"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Coaching", detail: "25 min · Online · Contemporary vocals", price: "₹2,500", unit: "per session" },
+    { title: "Songwriting & Production", detail: "40 min · Online · Composition tips", price: "₹2,200", unit: "per session" },
+    { title: "Stage Performance", detail: "30 min · Online · Performance techniques", price: "₹2,200", unit: "per session" }
+  ],
+
+discography: [
+  { title: "City Lights", meta: "EP · 2022 · 5 tracks", link: "https://music.apple.com/us/artist/xzibit/106492", cover: "assets/images/discography/xihibit/city-lights.jpg" },
+  { title: "Late Nights", meta: "Single · 2023 · 3 tracks", link: "https://music.apple.com/us/artist/xzibit/106492", cover: "assets/images/discography/xihibit/late-nights.jpg" }
+]
+},
+
+
+sabrina: {
+  name: "Sabrina Carpenter",
+  profileImg: "assets/images/artists/sabrina.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Sabrina Carpenter is an American singer, songwriter, and actress known for her pop vocals and acting roles on Disney Channel. 
+    She blends storytelling and performance in her music for a young audience.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Sabrina has been nominated for Radio Disney Music Awards, Teen Choice Awards, and iHeartRadio Music Awards. 
+    She is recognized for her songwriting and vocal performance talent.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Popular songs include "Thumbs", "Why", and "Skin". She has toured internationally and collaborated with other young pop stars.
+    </p>
+  `,
+  lessonDuration: "25 minutes",
+  lessonPrice: "Group: $2,000 / 1-on-1: $2,500",
+  categories: ["Singing", "Songwriting", "Stage presence"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Coaching", detail: "25 min · Online · Pop vocals", price: "₹2,500", unit: "per session" },
+    { title: "Songwriting Workshop", detail: "40 min · Online · Lyrics & melody", price: "₹2,200", unit: "per session" },
+    { title: "Stage Performance", detail: "30 min · Online · Live presence & confidence", price: "₹2,200", unit: "per session" }
+  ],
+
+discography: [
+  { title: "Singular: Act I", meta: "EP · 2018 · 6 tracks", link: "https://music.apple.com/us/artist/sabrina-carpenter/390647681", cover: "assets/images/discography/sabrina-carpenter/singular-1.webp" },
+  { title: "Singular: Act II", meta: "EP · 2019 · 6 tracks", link: "https://music.apple.com/us/artist/sabrina-carpenter/390647681", cover: "assets/images/discography/sabrina-carpenter/singular-2.png" },
+  { title: "Emails I Can't Send", meta: "Album · 2022 · 15 tracks", link: "https://music.apple.com/us/artist/sabrina-carpenter/390647681", cover: "assets/images/discography/sabrina-carpenter/emails-i-cant-send.webp" },
+  { title: "Evolution", meta: "Album · 2016 · 12 tracks", link: "https://music.apple.com/us/artist/sabrina-carpenter/390647681", cover: "assets/images/discography/sabrina-carpenter/evolution.webp" },
+  { title: "Eyes Wide Open", meta: "Album · 2015 · 11 tracks", link: "https://music.apple.com/us/artist/sabrina-carpenter/390647681", cover: "assets/images/discography/sabrina-carpenter/eyes-wide-open.webp" },
+  { title: "Can't Blame a Girl for Trying", meta: "EP · 2014 · 5 tracks", link: "https://music.apple.com/us/artist/sabrina-carpenter/390647681", cover: "assets/images/discography/sabrina-carpenter/cant-blame-a-girl.jpg" }
+]
+},
+
+
+
+taylor: {
+  name: "Taylor Swift",
+  profileImg: "assets/images/artists/taylor-swift.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Taylor Swift is a multi-genre singer-songwriter known for her storytelling, songwriting, 
+    and record-breaking albums across country, pop, and alternative genres. She began her career 
+    in Nashville and has become one of the most influential artists in the world.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Taylor has won 11 Grammy Awards, 34 Billboard Music Awards, 1 Emmy Award, and 10 Country Music 
+    Association Awards. She has been recognized for her influence in music, philanthropy, and advocacy.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Her hits include "Love Story", "Shake It Off", "Blank Space", "Cardigan", and "Anti-Hero". 
+    Taylor has headlined major tours, performed at Coachella, and set multiple streaming and sales records globally.
+    </p>
   `,
   lessonDuration: "30 minutes",
   lessonPrice: "Group: $2,500 / 1-on-1: $3,500",
-  categories: ["Singing", "Songwriting", "Stage presence", "Producing"]
+  categories: ["Singing", "Songwriting", "Stage presence", "Producing"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Session", detail: "30 min · Online · Singing & expression", price: "₹3,500", unit: "per session" },
+    { title: "Songwriting Workshop", detail: "45 min · Online · Storytelling techniques", price: "₹3,500", unit: "per session" },
+    { title: "Stage Performance & Presence", detail: "40 min · Online · Stage tips & delivery", price: "₹3,500", unit: "per session" }
+  ],
+
+ discography: [
+  { title: "Taylor Swift", meta: "Album · 2006 · 11 tracks", link: "https://music.apple.com/us/artist/taylor-swift/159260351", cover: "assets/images/discography/taylor-swift/taylor-swift.jpg" },
+  { title: "Fearless", meta: "Album · 2008 · 13 tracks", link: "https://music.apple.com/us/artist/taylor-swift/159260351", cover: "assets/images/discography/taylor-swift/fearless.jpg" },
+  { title: "1989", meta: "Album · 2014 · 13 tracks", link: "https://music.apple.com/us/artist/taylor-swift/159260351", cover: "assets/images/discography/taylor-swift/1989.webp" },
+  { title: "Red", meta: "Album · 2012 · 16 tracks", link: "https://music.apple.com/us/artist/taylor-swift/159260351", cover: "assets/images/discography/taylor-swift/red.webp" },
+  { title: "Lover", meta: "Album · 2019 · 18 tracks", link: "https://music.apple.com/us/artist/taylor-swift/159260351", cover: "assets/images/discography/taylor-swift/lover.webp" }
+]
 },
 
+
+ miley: {
+  name: "Miley Cyrus",
+  profileImg: "assets/images/artists/miley-cyrus.png",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Miley Cyrus is a versatile singer, songwriter, and actress, rising to fame with the Disney Channel 
+    series "Hannah Montana". She has since built a multi-genre music career spanning pop, rock, and country, 
+    known for her distinctive voice and bold persona.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Miley has received 1 Billboard Music Award, 2 MTV Video Music Awards, and several Teen Choice Awards. 
+    She has also been recognized for her advocacy work and influence on youth culture.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Some of her hits include "Wrecking Ball", "Party in the USA", "Malibu", and "Midnight Sky". 
+    Miley has headlined global tours and performed at major award shows like the Grammys.
+    </p>
+  `,
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $3,200 / 1-on-1: $4,000",
+  categories: ["Singing", "Songwriting", "Stage presence", "Pop/Rock"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Session", detail: "30 min · Online · Pop & Rock vocals", price: "₹3,800", unit: "per session" },
+    { title: "Songwriting Workshop", detail: "45 min · Online · Writing hits & lyrics", price: "₹3,500", unit: "per session" },
+    { title: "Stage & Performance Coaching", detail: "40 min · Online · Stage presence", price: "₹3,500", unit: "per session" }
+  ],
+
+ discography: [
+  { title: "Plastic Hearts", meta: "Album · 2020 · 12 tracks", link: "https://music.apple.com/us/artist/miley-cyrus/137057909", cover: "assets/images/discography/miley-cyrus/plastic-hearts.webp" },
+  { title: "Younger Now", meta: "Album · 2017 · 15 tracks", link: "https://music.apple.com/us/artist/miley-cyrus/137057909", cover: "assets/images/discography/miley-cyrus/young-now.jpg" },
+  { title: "Bangerz", meta: "Album · 2013 · 15 tracks", link: "https://music.apple.com/us/artist/miley-cyrus/137057909", cover: "assets/images/discography/miley-cyrus/bangerz.jpg" }
+]
+},
+
+
+selena: {
+  name: "Selena Gomez",
+  profileImg: "assets/images/artists/selena-gomez.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Selena Gomez is a singer, songwriter, and actress who started her career on Disney Channel’s "Wizards of Waverly Place". 
+    She has evolved into a globally recognized pop and R&B artist, with a strong fan following.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Selena has won 1 American Music Award, 1 Billboard Women in Music Award, and multiple Teen Choice Awards. 
+    She has also been recognized for her philanthropic work and mental health advocacy.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Popular hits include "Lose You to Love Me", "Rare", "Come & Get It", and "Hands to Myself". 
+    Selena has headlined international tours and collaborated with artists like Marshmello and Blackpink.
+    </p>
+  `,
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $2,500 / 1-on-1: $3,500",
+  categories: ["Singing", "Songwriting", "Stage presence", "Pop/R&B"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Session", detail: "30 min · Online · Pop & R&B vocals", price: "₹3,500", unit: "per session" },
+    { title: "Songwriting & Storytelling", detail: "45 min · Online · Writing hits", price: "₹3,500", unit: "per session" },
+    { title: "Stage Performance", detail: "40 min · Online · Confidence & stage tips", price: "₹3,500", unit: "per session" }
+  ],
+    discography: [
+  { title: "Rare", meta: "Album · 2020 · 13 tracks", link: "https://music.apple.com/us/artist/selena-gomez/280215834", cover: "assets/images/discography/selena-gomez/rare.jpg" },
+  { title: "Revival", meta: "Album · 2015 · 14 tracks", link: "https://music.apple.com/us/artist/selena-gomez/280215834", cover: "assets/images/discography/selena-gomez/revival.webp" },
+  { title: "Stars Dance", meta: "Album · 2013 · 14 tracks", link: "https://music.apple.com/us/artist/selena-gomez/280215834", cover: "assets/images/discography/selena-gomez/stars-dance.webp" }
+]
+},
+
+
 dualipa: {
-    name: "Dua Lipa",
-    profileImg: "assets/images/artists/dua-lipa.jpg",
-    bio: `
-      Learn modern pop singing, stage performance, and songwriting with Dua Lipa. Includes tips on style, vocal techniques, and performance energy.
-    `,
-    lessonDuration: "30 minutes",
-    lessonPrice: "Group: $2,800 / 1-on-1: $3,800",
-    categories: ["Singing", "Songwriting", "Stage presence"]
-  },
+  name: "Dua Lipa",
+  profileImg: "assets/images/artists/dua-lipa.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Dua Lipa is a British-Albanian pop sensation known for her deep vocals, danceable hits, 
+    and confident stage presence. Since breaking out in 2015, she has become one of the 
+    most influential contemporary pop artists worldwide, blending pop, disco, and electronic music.</p>
 
-  pitbull: {
-    name: "Pitbull",
-    profileImg: "assets/images/artists/pitbull.jpg",
-    bio: `
-      Learn rap, vocal performance, stage presence, and music production with Pitbull. Tips on creating catchy hooks and performing for global audiences.
-    `,
-    lessonDuration: "30 minutes",
-    lessonPrice: "Group: $2,800 / 1-on-1: $3,800",
-    categories: ["Singing", "Rap", "Stage presence", "Producing"]
-  },
+    <p><strong>Awards & Accolades :</strong><br>
+    Dua Lipa has won 2 Grammy Awards, 3 Brit Awards, and multiple MTV Video Music Awards. 
+    Her influence on modern pop culture is recognized globally for both music and fashion.</p>
 
-  blackpink: {
-    name: "BLACKPINK",
-    profileImg: "assets/images/artists/blackpink-2.png",
-    bio: `
-      Learn K-pop vocal techniques, group performance, choreography, and stage presence with BLACKPINK. Perfect for aspiring performers.
-    `,
-    lessonDuration: "30 minutes",
-    lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
-    categories: ["Singing", "Dancing", "Stage presence"]
-  },
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Some of her biggest hits include "New Rules", "Levitating", "Physical", and "Don't Start Now". 
+    She has headlined major music festivals worldwide, collaborated with top artists, 
+    and her album "Future Nostalgia" received critical acclaim for its innovative retro-pop sound.
+    </p>
+  `,
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $2,800 / 1-on-1: $3,800",
+  categories: ["Singing", "Songwriting", "Stage presence", "Producing"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Coaching", detail: "30 min · Online · Focus on pop vocals", price: "₹3,800", unit: "per session" },
+    { title: "Songwriting Workshop", detail: "45 min · Online · Pop song structure", price: "₹3,500", unit: "per session" },
+    { title: "Stage Presence & Performance", detail: "40 min · Online · Live performance tips", price: "₹3,500", unit: "per session" }
+  ],
+
+discography: [
+  { title: "Dua Lipa", meta: "Album · 2017 · 11 tracks", link: "https://music.apple.com/us/artist/dua-lipa/1031397873", cover: "assets/images/discography/dua-lipa/dua-lipa.webp" },
+  { title: "Future Nostalgia", meta: "Album · 2020 · 11 tracks", link: "https://music.apple.com/us/artist/dua-lipa/1031397873", cover: "assets/images/discography/dua-lipa/future-nostalgia.webp" },
+  { title: "Club Future Nostalgia", meta: "Remix Album · 2020 · 14 tracks", link: "https://music.apple.com/us/artist/dua-lipa/1031397873", cover: "assets/images/discography/dua-lipa/club-future-nostalgia.webp" }
+]
+},
 
  
-   justinbieber: {
-    name: "Justin Bieber",
-    profileImg: "assets/images/artists/justinbieber-2.jpg",
-    bio: `
-      Learn pop singing, stage performance, songwriting, and production techniques with Justin Bieber. Tips on vocal style and audience connection.
-    `,
-    lessonDuration: "30 minutes",
-    lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
-    categories: ["Singing", "Songwriting", "Stage presence", "Producing"]
-  },
-
-  shakira: {
-  name: "Shakira",
-  profileImg: "assets/images/artists/shakira.jpg",
+pitbull: {
+  name: "Pitbull",
+  profileImg: "assets/images/artists/pitbull.jpg",
   bio: `
-    Learn singing, dancing, and stage performance with Shakira. Insights on vocal technique, stage presence, and music production.
+    <p><strong>Career & Background :</strong><br>
+    Pitbull, also known as Mr. Worldwide, is a Cuban-American rapper, singer, and producer 
+    recognized for his party anthems, collaborations, and global appeal. His music blends hip-hop, 
+    pop, and Latin rhythms.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Pitbull has won a Grammy Award, multiple Billboard Music Awards, Latin Grammys, and has been 
+    recognized for his humanitarian work and contributions to Latin music globally.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Major hits include "Give Me Everything", "Timber", "I Know You Want Me", and "Feel This Moment". 
+    He has headlined international festivals, collaborated with stars like Jennifer Lopez, 
+    Chris Brown, and Shakira, and continues to influence pop and dance music worldwide.
+    </p>
+  `,
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $2,800 / 1-on-1: $3,800",
+  categories: ["Singing", "Rap", "Stage presence", "Producing"],
+
+  lessons: [
+    { title: "1-on-1 Rap & Vocal Coaching", detail: "30 min · Online · Rap & vocals", price: "₹3,800", unit: "per session" },
+    { title: "Songwriting & Production Workshop", detail: "45 min · Online · Creating hits", price: "₹3,500", unit: "per session" },
+    { title: "Stage Performance & Branding", detail: "40 min · Online · Live tips & persona", price: "₹3,500", unit: "per session" }
+  ],
+
+discography: [
+  { title: "M.I.A.M.I.", meta: "Album · 2004 · 19 tracks", link: "https://music.apple.com/us/artist/pitbull/27044968", cover: "assets/images/discography/pitbull/miami.webp" },
+  { title: "Planet Pit", meta: "Album · 2011 · 17 tracks", link: "https://music.apple.com/us/artist/pitbull/27044968", cover: "assets/images/discography/pitbull/planet-pit.webp" },
+  { title: "Global Warming", meta: "Album · 2012 · 12 tracks", link: "https://music.apple.com/us/artist/pitbull/27044968", cover: "assets/images/discography/pitbull/global-warming.webp" }
+]
+},
+
+
+
+ blackpink: {
+  name: "BLACKPINK",
+  profileImg: "assets/images/artists/blackpink-2.png",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    BLACKPINK is a South Korean girl group known for its powerful vocals, dynamic choreography, 
+    and global K-pop influence. They have a massive international fanbase and have made history 
+    as one of the first K-pop acts to headline major Western festivals.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    BLACKPINK has received multiple MTV Video Music Awards, People’s Choice Awards, and Seoul Music Awards. 
+    They have been nominated for Billboard Music Awards and set Guinness World Records for YouTube views 
+    and social media impact.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Their most popular hits include "Ddu-Du Ddu-Du", "Kill This Love", "How You Like That", 
+    and "Pink Venom". BLACKPINK has collaborated with artists like Lady Gaga, Selena Gomez, 
+    and Cardi B, and continues to shape the global K-pop industry.
+    </p>
   `,
   lessonDuration: "30 minutes",
   lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
-  categories: ["Singing", "Dancing", "Stage presence", "Producing"]
+  categories: ["Singing", "Dancing", "Stage presence"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Session", detail: "30 min · Online · K-pop style vocals", price: "₹4,000", unit: "per session" },
+    { title: "Dance & Choreography Workshop", detail: "45 min · Online · Stage performance", price: "₹3,500", unit: "per session" },
+    { title: "Performance & Stage Presence", detail: "40 min · Online · Live show tips", price: "₹3,500", unit: "per session" }
+  ],
+
+ discography: [
+  { title: "Square Up", meta: "EP · 2018 · 4 tracks", link: "https://music.apple.com/us/artist/blackpink/1141774019", cover: "assets/images/discography/black-pink/square-up.jpg" },
+  { title: "Kill This Love", meta: "Single · 2019 · 4 tracks", link: "https://music.apple.com/us/artist/blackpink/1141774019", cover: "assets/images/discography/black-pink/kill-this-love.jpg" },
+  { title: "The Album", meta: "Album · 2020 · 8 tracks", link: "https://music.apple.com/us/artist/blackpink/1141774019", cover: "assets/images/discography/black-pink/the-album.webp" }
+]
 },
 
+ 
+   justinbieber: {
+  name: "Justin Bieber",
+  profileImg: "assets/images/artists/justinbieber-2.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Justin Bieber is a Canadian pop superstar who rose to fame as a teenager via YouTube. 
+    Over the years, he has developed into a global pop icon known for his versatile vocals 
+    and chart-topping hits across pop, R&B, and dance genres.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Justin has won 1 Grammy Award, 20+ Billboard Music Awards, American Music Awards, and numerous 
+    MTV Video Music Awards. He has also been recognized for philanthropy and his influence on pop culture.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    His biggest hits include "Baby", "Sorry", "Peaches", and "Where Are Ü Now". 
+    Justin has headlined global tours, performed at major award shows, and collaborated with 
+    top artists including Ariana Grande, Ed Sheeran, and DJ Khaled.
+    </p>
+  `,
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
+  categories: ["Singing", "Songwriting", "Stage presence", "Producing"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Session", detail: "30 min · Online · Pop & R&B vocals", price: "₹4,000", unit: "per session" },
+    { title: "Songwriting & Production", detail: "45 min · Online · Writing hits", price: "₹3,500", unit: "per session" },
+    { title: "Performance & Stage Presence", detail: "40 min · Online · Live performance techniques", price: "₹3,500", unit: "per session" }
+  ],
+
+  discography: [
+  { title: "My World 2.0", meta: "Album · 2010 · 13 tracks", link: "https://music.apple.com/us/artist/justin-bieber/320569549", cover: "assets/images/discography/justin-bieber/my-world.jpg" },
+  { title: "Purpose", meta: "Album · 2015 · 13 tracks", link: "https://music.apple.com/us/artist/justin-bieber/320569549", cover: "assets/images/discography/justin-bieber/purpose.png" },
+  { title: "Justice", meta: "Album · 2021 · 16 tracks", link: "https://music.apple.com/us/artist/justin-bieber/320569549", cover: "assets/images/discography/justin-bieber/justice.jpg" }
+]
+},
+
+
+ shakira: {
+  name: "Shakira",
+  profileImg: "assets/images/artists/shakira.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Shakira is a global music icon, singer, songwriter, and dancer known for her unique voice, 
+    dynamic stage presence, and genre-blending music. With a career spanning over two decades, 
+    she has sold over 70 million albums worldwide and has performed in multiple languages, 
+    captivating audiences with her Latin pop, pop-rock, and dance hits.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Shakira has won 3 Grammy Awards, 12 Latin Grammys, 4 American Music Awards, and numerous Billboard 
+    awards. She is recognized for her philanthropic efforts, including founding the Barefoot Foundation 
+    to support education for underprivileged children in Colombia and worldwide.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Some of Shakira’s most famous tracks include "Hips Don’t Lie", "Waka Waka (This Time for Africa)", 
+    "Whenever, Wherever", and "La Tortura". She has headlined global tours, performed at the Super Bowl 
+    Halftime Show, and remains one of the most influential Latin artists of all time.</p>
+  `,
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
+  categories: ["Singing", "Dancing", "Stage presence", "Songwriting"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Session", detail: "30 min · Online · Personalized feedback", price: "₹3,500", unit: "per session" },
+    { title: "Dance & Stage Performance", detail: "45 min · Online · Choreography & live tips", price: "₹3,500", unit: "per session" },
+    { title: "Songwriting Workshop", detail: "40 min · Online · Latin pop style & hooks", price: "₹3,000", unit: "per session" }
+  ],
+
+ discography: [
+  { title: "Laundry Service", meta: "Album · 2001 · 13 tracks", link: "https://music.apple.com/us/artist/shakira/889327", cover: "assets/images/discography/shakira/laundry-service.jpg" },
+  { title: "Fijación Oral Vol. 1", meta: "Album · 2005 · 12 tracks", link: "https://music.apple.com/us/artist/shakira/889327", cover: "assets/images/discography/shakira/fijacion-oral-vol-1.jpg" },
+  { title: "Oral Fixation Vol. 2", meta: "Album · 2005 · 11 tracks", link: "https://music.apple.com/us/artist/shakira/889327", cover: "assets/images/discography/shakira/oral-fixation-vol-2.jpg" },
+  { title: "She Wolf", meta: "Album · 2009 · 12 tracks", link: "https://music.apple.com/us/artist/shakira/889327", cover: "assets/images/discography/shakira/she-wolf.webp" },
+  { title: "El Dorado", meta: "Album · 2017 · 13 tracks", link: "https://music.apple.com/us/artist/shakira/889327", cover: "assets/images/discography/shakira/eldorado.jpg" }
+]
+},
+
+
 olivia: {
-    name: "Olivia Rodrigo",
-    cardImg: "assets/images/artists/olivia.jpg",
-    profileImg: "assets/images/artists/olivia.jpg",
-    bio: `
-      Learn singing and songwriting with Olivia Rodrigo.
-      Techniques, performance tips, and advice on writing hits.
-    `,
-    lessonDuration: "25 minutes",
-    lessonPrice: "Group: $2,200 / 1-on-1: $3,000",
-    categories: ["Singing", "Songwriting", "Stage presence"],
-    labels: ["Pop Star", "Rising Talent"]
-  }
+  name: "Olivia Rodrigo",
+  profileImg: "assets/images/artists/olivia.webp",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Olivia Rodrigo is an American singer-songwriter and actress who gained fame with her debut single "drivers license". 
+    She has become a voice for Gen Z, blending pop and alternative music with raw emotion and storytelling.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Olivia has won 1 Grammy Award, 3 MTV Video Music Awards, and 1 American Music Award. 
+    She has also topped the Billboard Hot 100 multiple times with her debut album.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Hits include "drivers license", "good 4 u", and "deja vu". Olivia has headlined tours worldwide and is recognized 
+    for her songwriting maturity at a young age.
+    </p>
+  `,
+  lessonDuration: "25 minutes",
+  lessonPrice: "Group: $2,200 / 1-on-1: $3,000",
+  categories: ["Singing", "Songwriting", "Stage presence"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Coaching", detail: "25 min · Online · Emotional delivery & technique", price: "₹3,000", unit: "per session" },
+    { title: "Songwriting Session", detail: "40 min · Online · Lyrics & hooks", price: "₹2,500", unit: "per session" },
+    { title: "Stage Presence Coaching", detail: "30 min · Online · Performance skills", price: "₹2,500", unit: "per session" }
+  ],
+
+  discography: [
+  { title: "SOUR", meta: "Album · 2021 · 11 tracks", link: "https://music.apple.com/us/artist/olivia-rodrigo/979458609", cover: "assets/images/discography/olivia-rodrigo/sour.webp" },
+  { title: "Olivia Rodrigo – Debut EP", meta: "EP · 2020 · 4 tracks", link: "https://music.apple.com/us/artist/olivia-rodrigo/979458609", cover: "assets/images/discography/olivia-rodrigo/debut-ep.webp" }
+]
+},
+
+
+ellie: {
+  name: "Ellie Goulding",
+  profileImg: "assets/images/artists/ellie-2.jpg",
+  bio: `
+    <p><strong>Career & Background:</strong><br>
+    Ellie Goulding is a British singer-songwriter and multi-instrumentalist known for her distinctive voice 
+    and ethereal pop-electronic sound. She gained fame with her debut album "Lights" and has become a 
+    global pop icon with a string of hit singles and collaborations.</p>
+
+    <p><strong>Awards & Accolades:</strong><br>
+    Ellie has won a Brit Award for British Female Solo Artist, multiple BMI Awards, and has been 
+    nominated for Grammys and MTV Awards. She has performed at major events including the Olympics, 
+    Coachella, and global music festivals.</p>
+
+    <p><strong>Hit Songs & Achievements:</strong><br>
+    Some of her biggest hits include "Love Me Like You Do", "Lights", "Burn", and "Anything Could Happen". 
+    Ellie has collaborated with artists such as Calvin Harris, DJ Snake, and Major Lazer, 
+    and continues to influence the modern pop and electronic music scene worldwide.
+    </p>
+  `,
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $2,800 / 1-on-1: $3,800",
+  categories: ["Singing", "Songwriting", "Stage presence", "Pop/Electronic"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Session", detail: "30 min · Online · Pop & electronic vocals", price: "₹3,800", unit: "per session" },
+    { title: "Songwriting Workshop", detail: "45 min · Online · Pop song composition & lyrics", price: "₹3,500", unit: "per session" },
+    { title: "Stage Performance & Presence", detail: "40 min · Online · Live performance techniques", price: "₹3,500", unit: "per session" }
+  ],
+
+  discography: [
+  { title: "Lights", meta: "Album · 2010 · 13 tracks", link: "https://music.apple.com/us/artist/ellie-goulding/338264227", cover: "assets/images/discography/ellie-goulding/lights.webp" },
+  { title: "Halcyon", meta: "Album · 2012 · 13 tracks", link: "https://music.apple.com/us/artist/ellie-goulding/338264227", cover: "assets/images/discography/ellie-goulding/halcyon.jpg" },
+  { title: "Delirium", meta: "Album · 2015 · 14 tracks", link: "https://music.apple.com/us/artist/ellie-goulding/338264227", cover: "assets/images/discography/ellie-goulding/delirium.webp" },
+  { title: "Brightest Blue", meta: "Album · 2020 · 14 tracks", link: "https://music.apple.com/us/artist/ellie-goulding/338264227", cover: "assets/images/discography/ellie-goulding/brightest-blue.webp" }
+]
+},
+
+
+jcole: {
+  name: "J. Cole",
+  profileImg: "assets/images/artists/j-cole.jpg",
+  bio: `
+    <p><strong>Career & Background:</strong><br>
+    J. Cole is an American rapper, singer, songwriter, and producer known for his thought-provoking lyrics, 
+    storytelling, and introspective approach to hip-hop. He first gained attention through mixtapes and 
+    later became one of the most respected voices in modern rap.</p>
+
+    <p><strong>Awards & Accolades:</strong><br>
+    J. Cole has won 1 Grammy Award, 5 BET Hip Hop Awards, and multiple Billboard Music Awards. 
+    He has been recognized for his contributions to hip-hop culture and for producing critically acclaimed albums.</p>
+
+    <p><strong>Hit Songs & Achievements:</strong><br>
+    Some of his biggest hits include "No Role Modelz", "Middle Child", "Power Trip", and "Wet Dreamz". 
+    J. Cole has headlined global tours, performed at major festivals, and continues to influence 
+    the hip-hop scene as both an artist and producer.
+    </p>
+  `,
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
+  categories: ["Rap", "Songwriting", "Producing", "Stage presence"],
+
+  lessons: [
+    { title: "1-on-1 Rap & Vocal Session", detail: "30 min · Online · Lyrics, flow, and delivery", price: "₹4,000", unit: "per session" },
+    { title: "Songwriting & Production Workshop", detail: "45 min · Online · Beat making & lyric writing", price: "₹3,500", unit: "per session" },
+    { title: "Stage Performance & Presence", detail: "40 min · Online · Live performance techniques", price: "₹3,500", unit: "per session" }
+  ],
+discography: [
+  { title: "Cole World: The Sideline Story", meta: "Album · 2011 · 16 tracks", link: "https://music.apple.com/us/artist/j-cole/73705833", cover: "assets/images/discography/j-cole/cole-world.png" },
+  { title: "Born Sinner", meta: "Album · 2013 · 16 tracks", link: "https://music.apple.com/us/artist/j-cole/73705833", cover: "assets/images/discography/j-cole/born-sinner.jpg" },
+  { title: "2014 Forest Hills Drive", meta: "Album · 2014 · 13 tracks", link: "https://music.apple.com/us/artist/j-cole/73705833", cover: "assets/images/discography/j-cole/2014-forest-hills-drive.jpg" },
+  { title: "4 Your Eyez Only", meta: "Album · 2016 · 10 tracks", link: "https://music.apple.com/us/artist/j-cole/73705833", cover: "assets/images/discography/j-cole/4-your-eyez-only.webp" },
+  { title: "KOD", meta: "Album · 2018 · 12 tracks", link: "https://music.apple.com/us/artist/j-cole/73705833", cover: "assets/images/discography/j-cole/kod.webp" },
+  { title: "The Off-Season", meta: "Album · 2021 · 10 tracks", link: "https://music.apple.com/us/artist/j-cole/73705833", cover: "assets/images/discography/j-cole/the-off-season.jpg" }
+]
+},
+
+
+tate: {
+  name: "Tate McRae",
+  profileImg: "assets/images/artists/Tate-McRae-TMac-2.jpg",
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Tate McRae is a Canadian singer, dancer, and songwriter known for her emotional lyrics and modern pop sound. 
+    She gained attention from viral videos and TikTok performances, building a young global fanbase.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Tate has been nominated for MTV Video Music Awards, iHeartRadio Music Awards, and received recognition 
+    for her breakout performances and songwriting talent.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Popular tracks include "you broke me first", "vicious", and "rubberband". She has performed in global 
+    live events and continues to rise as a contemporary pop star.
+    </p>
+  `,
+  lessonDuration: "25 minutes",
+  lessonPrice: "Group: $2,000 / 1-on-1: $2,800",
+  categories: ["Singing", "Songwriting", "Stage presence", "Dance"],
+
+  lessons: [
+    { title: "1-on-1 Vocal Coaching", detail: "25 min · Online · Modern pop vocals", price: "₹2,800", unit: "per session" },
+    { title: "Songwriting Workshop", detail: "40 min · Online · Lyrics & emotion", price: "₹2,500", unit: "per session" },
+    { title: "Performance & Dance", detail: "30 min · Online · Stage tips & choreography", price: "₹2,500", unit: "per session" }
+  ],
+
+  discography: [
+  { title: "All The Things I Never Said", meta: "EP · 2020 · 7 tracks", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/all-the-things-i-never-said.png" },
+  { title: "Too Young To Be Sad", meta: "EP · 2021 · 6 tracks", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/Too-young-to-be-sad.webp" },
+  { title: "You Broke Me First", meta: "Single · 2021 · 1 track", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/you-broke-me-first.webp" },
+  { title: "Vicious", meta: "Single · 2021 · 1 track", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/vicious.jpg" },
+  { title: "Rubberband", meta: "Single · 2021 · 1 track", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/rubberband.webp" },
+  { title: "That Way", meta: "Single · 2022 · 1 track", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/that-way.jpg" },
+  { title: "She's All I Wanna Be", meta: "Single · 2022 · 1 track", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/shes-all-i-wanna-be.webp" }
+]
+}
 
 };
 
@@ -2892,27 +3755,96 @@ function showProfile(artistKey) {
 
   const artist = artistsData[artistKey];
 
+  // -------------------------------
   // Update profile image
+  // -------------------------------
   profilePage.querySelector('.profile-img').innerHTML = `
     <img src="${artist.profileImg}" 
          alt="${artist.name}" 
          style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
   `;
 
+  // -------------------------------
   // Update name
+  // -------------------------------
   profilePage.querySelector('.profile-info-name').innerHTML = artist.name.replace(" ", "<br>");
 
+  // -------------------------------
   // Update bio
+  // -------------------------------
   profilePage.querySelector('.profile-bio').innerHTML = artist.bio;
 
-  // Optional: lesson info
-  // profilePage.querySelector('.lesson-duration').textContent = artist.lessonDuration;
-  // profilePage.querySelector('.lesson-price').textContent = artist.lessonPrice;
+  // -------------------------------
+  // Update top lesson info
+  // -------------------------------
+  const lessonInfo = profilePage.querySelector('.lesson-info');
+  if (lessonInfo) {
+    lessonInfo.querySelector('.lesson-duration').textContent = artist.lessonDuration || '';
+    if (artist.lessonPrice) {
+      const [groupPrice, oneOnOnePrice] = artist.lessonPrice.split('/');
+      lessonInfo.querySelector('.lesson-group').textContent = groupPrice.trim();
+      lessonInfo.querySelector('.lesson-oneonone').textContent = oneOnOnePrice.trim();
+    }
+  }
 
+  // -------------------------------
+  // Populate dynamic lessons
+  // -------------------------------
+  const lessonsContainer = profilePage.querySelector('.lessons-available');
+  if (lessonsContainer) {
+    lessonsContainer.innerHTML = ''; // clear previous
+    if (artist.lessons) {
+      artist.lessons.forEach(lesson => {
+        lessonsContainer.innerHTML += `
+          <div class="lesson-item">
+            <div>
+              <div class="lesson-type">${lesson.title}</div>
+              <div class="lesson-detail">${lesson.detail}</div>
+            </div>
+            <div class="lesson-price">
+              <div class="lesson-price-val">${lesson.price}</div>
+              <div class="lesson-price-unit">${lesson.unit}</div>
+            </div>
+          </div>
+        `;
+      });
+    }
+  }
+
+  // -------------------------------
+  // Populate dynamic discography
+  // -------------------------------
+  const discoContainer = profilePage.querySelector('.discography');
+  if (discoContainer) {
+    discoContainer.innerHTML = ''; // clear previous
+    if (artist.discography) {
+      artist.discography.forEach(item => {
+        discoContainer.innerHTML += `
+          <div class="discography-item">
+            <div class="disco-cover grad-1">
+              ${item.cover ? `<img src="${item.cover}" alt="${item.title}" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" />` : '💿'}
+            </div>
+            <div class="disco-info">
+              <div class="disco-title">${item.title}</div>
+              <div class="disco-meta">${item.meta}</div>
+            </div>
+          <a href="${item.link}" target="_blank" class="disco-apple">
+            <img src="assets/images/icons/icn8-apple-100.png" 
+               alt="Apple Music" 
+             style="width:24px; height:24px; vertical-align:middle; margin-right:6px;" />
+                Listen
+              </a>
+          </div>
+        `;
+      });
+    }
+  }
+
+  // -------------------------------
   // Show profile page
+  // -------------------------------
   showPage('profile');
 }
-
 /* =========================================
    LOAD MORE ARTISTS
 ========================================= */
