@@ -25,6 +25,13 @@
   --font-serif:'Playfair Display',serif;
   --font-body:'Sora',sans-serif;
 }
+
+
+
+* {
+  box-sizing: border-box;
+}
+
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
@@ -594,7 +601,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 3
 }
 
 /* ─── PAGE 3: ARTIST PROFILE ───────────────────── */
-.profile-hero{display:grid;grid-template-columns:340px 1fr;gap:60px;padding:140px 0 80px;align-items:start}
+.profile-hero{
+  display:flex;
+  grid-template-columns:340px 1fr;
+  gap:60px;padding:140px 0 80px;
+  align-items:start
+}
 .profile-img-wrap{position:relative}
 .profile-img{width:100%;aspect-ratio:3/4;border-radius:20px;overflow:hidden;position:relative}
 .profile-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:120px}
@@ -939,6 +951,8 @@ textarea.form-control{resize:none;height:130px}
     z-index:100;
   }
 
+
+
     .nav-cta {
     margin-top:10px;
     padding:8px 16px;
@@ -960,31 +974,64 @@ textarea.form-control{resize:none;height:130px}
 
 
 
-@media(max-width:480px){
-
-    .section-label{
-      
-   width:200px;
-   
-   
-    }
-  .profile-actions{
-    width: 250px;
+@media(max-width:411px){
+  
+      .fix {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    justify-content: center;
   }
 
+      .profile-bio,
+  .lesson-info,
+  .zinkly-rounded-text,
+  p {
+    text-align: center;
+  }
+
+    .profile-hero {
+     grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 80px 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-hero > div {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+   .section-label{
+   width:100%;
+   max-width:200px;
   
-      .zinkly-rounded-text{
-        align-items: center;
-        justify-content: center;
-          text-align: justify;
-         width: 250px;
-      }
+}
+
+  .profile-actions{
+  width: 100%;
+  max-width: 250px;
+}
+
+  
+       .zinkly-rounded-text{
+    width:100%;
+    max-width:250px;
+    text-align:left;
+  }
+
 
        .artists-row{
     grid-template-columns:1fr;
   }
 
     .nav-links {
+    left:20px;
+   right:20px;
+   width:auto;
     display: none;          /* hide by default on small screens */
     flex-direction: column;
     gap:12px;
@@ -995,6 +1042,7 @@ textarea.form-control{resize:none;height:130px}
     right:20px;
     border-radius:12px;
     z-index:100;
+    
   }
 
     .nav-cta {
@@ -1056,7 +1104,57 @@ textarea.form-control{resize:none;height:130px}
   color: rgba(185, 183, 203, 0.986);     /* gold text */
   text-shadow: none;           /* remove all glow/blurry effect */
 }
- 
+
+@media(max-width:375px){
+   .fix {
+    flex-wrap: wrap;
+    gap: 18px;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    justify-content: center;
+  }
+  
+    .section-label{
+   width:100%;
+   max-width:200px;
+  
+}
+
+  .container,
+  .artists-grid,
+  .artist-card,
+  .profile-content,
+  .zinkly-fire-gold,
+  .zinkly-rounded-bg {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.profile-actions{
+  width: 100%;
+  max-width: 250px;
+}
+  
+       .zinkly-rounded-text{
+    width:100%;
+    max-width:250px;
+    text-align:left;
+  }
+
+
+       .artists-row{
+    grid-template-columns:1fr;
+      width:100%;
+
+  }
+
+}
+
 
 </style>
 </head>
@@ -2307,11 +2405,11 @@ textarea.form-control{resize:none;height:130px}
                   Instagram
              </a>
         </div>
-        <div style="display:flex;gap:30px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)">
-          <div><div style="font-size:12px;color:var(--muted)">Response Rate</div><div style="font-weight:700;margin-top:4px">98%</div></div>
-          <div><div style="font-size:12px;color:var(--muted)">Avg. Response</div><div style="font-weight:700;margin-top:4px">2 Hours</div></div>
-          <div><div style="font-size:12px;color:var(--muted)">Languages</div><div style="font-weight:700;margin-top:4px">English, Spanish</div></div>
-          <div><div style="font-size:12px;color:var(--muted)">Next Available</div><div style="font-weight:700;margin-top:4px;color:var(--teal)">Tomorrow</div></div>
+        <div class="fix" style="display:flex;gap:14px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border);">
+          <div><div style="font-size:12px;color:var(--muted)">Response Rate</div><div style="font-weight:700;margin-top:4px;font-size:large">98%</div></div>
+          <div><div style="font-size:12px;color:var(--muted)">Avg. Response</div><div style="font-weight:700;margin-top:4px;font-size:large">2 Hours</div></div>
+          <div><div style="font-size:12px;color:var(--muted)">Languages</div><div style="font-weight:700;margin-top:4px;font-size:large">English, Spanish</div></div>
+          <div><div style="font-size:12px;color:var(--muted)">Next Available</div><div style="font-weight:700;margin-top:4px;font-size:large;color:var(--teal)">Tomorrow</div></div>
         </div>
       </div>
     </div>
@@ -2487,13 +2585,13 @@ textarea.form-control{resize:none;height:130px}
               <div class="summary-line"><span class="summary-line-label">Date</span><span class="summary-line-val">Tomorrow</span></div>
               <div class="summary-line"><span class="summary-line-label">Time</span><span class="summary-line-val">11:00 AM IST</span></div>
               <div class="summary-line"><span class="summary-line-label">Format</span><span class="summary-line-val">Live Online (Video)</span></div>
-            </div>
             <div class="summary-total">
               <div class="summary-total-label">Total</div>
               <div class="summary-total-val">₹2,400</div>
             </div>
           </div>
-          <div style="margin-top:20px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px">
+         </div>
+             <div style="margin-top:20px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px">
             <div style="font-weight:600;margin-bottom:16px;font-size:15px">✅ What's Included</div>
             <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;flex-direction:column;gap:10px">
               <div>🎥 HD Video Session</div>
