@@ -938,6 +938,8 @@ textarea.form-control{resize:none;height:130px}
 /* MOBILE */
 
 @media(max-width:600px){
+
+  
   .nav-links {
     display: none;          /* hide by default on small screens */
     flex-direction: column;
@@ -1014,6 +1016,7 @@ textarea.form-control{resize:none;height:130px}
   .profile-actions{
   width: 100%;
   max-width: 250px;
+  display:grid;
 }
 
   
@@ -1135,9 +1138,15 @@ textarea.form-control{resize:none;height:130px}
     height: auto;
   }
 
-.profile-actions{
+  .profile-actions{
   width: 100%;
   max-width: 250px;
+  display:grid;
+  align-items: center;
+  justify-content: center;
+   grid-template-columns:1fr;
+      
+
 }
   
        .zinkly-rounded-text{
@@ -2980,10 +2989,22 @@ textarea.form-control{resize:none;height:130px}
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevents immediate closing
   navLinks.classList.toggle('active');
 });
 
+/* CLOSE MENU WHEN CLICKING ANYWHERE */
+document.addEventListener('click', (e) => {
+
+  const clickedInsideMenu = navLinks.contains(e.target);
+  const clickedHamburger = menuToggle.contains(e.target);
+
+  if (!clickedInsideMenu && !clickedHamburger) {
+    navLinks.classList.remove('active');
+  }
+
+});
 
 /* =========================================
    PAGE SWITCHING SYSTEM
