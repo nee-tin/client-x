@@ -563,6 +563,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 3
   animation: subtlePulseGlow 1.5s infinite;
 }
 
+.intro-highlight{
+  background: linear-gradient(90deg,#efab0cb0,#ff8c00be);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 /* ─── PAGE 2: ARTISTS ───────────────────────────── */
@@ -953,7 +958,12 @@ textarea.form-control{resize:none;height:130px}
     z-index:100;
   }
 
-
+  .profile-actions{
+  width: 100%;
+  max-width: 250px;
+  display:grid;
+  grid-template-columns:1fr;
+}
 
     .nav-cta {
     margin-top:10px;
@@ -1017,6 +1027,7 @@ textarea.form-control{resize:none;height:130px}
   width: 100%;
   max-width: 250px;
   display:grid;
+  grid-template-columns:1fr;
 }
 
   
@@ -1639,8 +1650,10 @@ textarea.form-control{resize:none;height:130px}
   <!-- ZINKLY INTRO WITH FULL-WIDTH ROUNDED BACKGROUND -->
 <section class="zinkly-rounded-bg">
   <div class="zinkly-rounded-text">
-  These are the artists that inspire Zinkly ! They embody creativity, innovation, and pure musical passion.
-  They are shaping the soundtrack of today and inspiring tomorrow’s music icons !
+   <span class="intro-highlight">
+   These are the artists that inspire Zinkly ! 
+   They embody creativity, innovation, and pure musical passion.
+  They are shaping the soundtrack of today and inspiring tomorrow’s music icons !</span>
   </div>
 </section>
 
