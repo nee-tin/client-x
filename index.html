@@ -26,10 +26,23 @@
   --font-body:'Sora',sans-serif;
 }
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
+html,
+body{
+  overflow-x:hidden;
+  width:100%;
+}
 
-* {
-  box-sizing: border-box;
+input,
+textarea,
+select,
+button{
+  max-width:100%;
 }
 
 html{scroll-behavior:smooth}
@@ -666,9 +679,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 3
 .booking-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
 .booking-form-header{padding:32px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,rgba(245,166,35,0.08),transparent)}
 .booking-form-body{padding:32px}
-.form-group{margin-bottom:24px}
+.form-group{
+  width:100%;
+}
 .form-label{font-size:13px;font-weight:600;color:var(--white);margin-bottom:8px;display:block;letter-spacing:0.5px}
-.form-control{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none;transition:border-color .2s}
+.form-control{width:100%; max-width: 100%;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--white);font-family:var(--font-body);font-size:14px;outline:none;transition:border-color .2s}
 .form-control:focus{border-color:var(--gold)}
 .form-control option{background:var(--bg3)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -716,7 +731,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:60px 0 3
 .pricing-features li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0}
 
 /* ─── PAGE 6: CONTACT ───────────────────────────── */
-.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:140px 0 80px;align-items:start}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px; padding: 30px;}
 .contact-info h2{font-family:var(--font-display);font-size:52px;letter-spacing:1px;margin-bottom:24px;line-height:1.05}
 .contact-info h2 span{color:var(--gold)}
 .contact-info p{color:var(--muted);font-size:16px;line-height:1.8;margin-bottom:40px}
@@ -732,22 +747,62 @@ textarea.form-control{resize:none;height:130px}
 .newsletter-band{background:linear-gradient(135deg,var(--bg2),var(--bg3));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 0;text-align:center;margin:0}
 .newsletter-band h3{font-family:var(--font-display);font-size:40px;letter-spacing:1px;margin-bottom:12px}
 .newsletter-band p{color:var(--muted);font-size:16px;margin-bottom:30px}
-.newsletter-row{display:flex;gap:12px;justify-content:center;max-width:480px;margin:0 auto}
-.newsletter-row .form-control{border-radius:50px;flex:1}
-.newsletter-row .btn-primary{white-space:nowrap;border-radius:50px}
+.newsletter-row{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  max-width:480px;
+  margin:0 auto;
+}
 
-/* ─── ANIMATIONS ───────────────────────────────── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.fade-up{animation:fadeUp .6s ease forwards}
-.fade-up-2{animation:fadeUp .6s .15s ease forwards;opacity:0}
-.fade-up-3{animation:fadeUp .6s .3s ease forwards;opacity:0}
-.fade-up-4{animation:fadeUp .6s .45s ease forwards;opacity:0}
+.newsletter-row .form-control{
+  border-radius:50px;
+  flex:1;
+}
 
+.newsletter-row .btn-primary{
+  white-space:nowrap;
+  border-radius:50px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+
+  from {
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.fade-up{
+  animation:fadeUp .6s ease forwards;
+}
+
+.fade-up-2{
+  animation:fadeUp .6s .15s ease forwards;
+  opacity:0;
+}
+
+.fade-up-3{
+  animation:fadeUp .6s .3s ease forwards;
+  opacity:0;
+}
+
+.fade-up-4{
+  animation:fadeUp .6s .45s ease forwards;
+  opacity:0;
+}
 /* ─── RESPONSIVE ───────────────────────────────── */
 /* TABLET */
 
 @media(max-width:900px){
-
+/* ─── ANIMATIONS ───────────────────*/
       .menu-toggle {
     display: block;
   }
@@ -782,19 +837,22 @@ textarea.form-control{resize:none;height:130px}
   }
 
 
+.nav-links{
+  display:none;
+  flex-direction:column;
+  gap:16px;
+  background:#111;
+  padding:16px;
 
-    .nav-links {
-    display: none;          /* hide by default on small screens */
-    flex-direction: column;
-    gap:16px;
-    background:#111;
-    padding:16px;
-    position:absolute;
-    top:60px;               /* adjust for nav height */
-    right:20px;
-    border-radius:12px;
-    z-index:100;
-  }
+  position:absolute;
+  top:60px;
+
+  right:10px;
+  left:10px;
+
+  border-radius:12px;
+  z-index:100;
+}
 
     .nav-right{
     gap:12px;
@@ -982,113 +1040,40 @@ textarea.form-control{resize:none;height:130px}
     font-size:24px;
     color:#fff;
   }
-}
-
-
-
-@media(max-width:411px){
-  
-      .fix {
-    flex-wrap: wrap;
-    gap: 18px;
-    padding-right: 0 !important;
-    margin-right: 0 !important;
-    justify-content: center;
-  }
-
-      .profile-bio,
-  .lesson-info,
-  .zinkly-rounded-text,
-  p {
+.subscribe-cta{
+    padding: 32px 18px;
     text-align: center;
+    border-radius: 20px;
   }
 
-    .profile-hero {
-     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 80px 16px;
-    flex-direction: column;
+  .subscribe-cta h2{
+    font-size: 1.4rem;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .subscribe-cta p{
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .btn-subscribe{
+    display: inline-flex;
     align-items: center;
-  }
-
-  .profile-hero > div {
+    justify-content: center;
     width: 100%;
-    max-width: 100%;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    border-radius: 50px;
   }
-
-
-   .section-label{
-   width:100%;
-   max-width:200px;
   
 }
 
-  .profile-actions{
-  width: 100%;
-  max-width: 250px;
-  display:grid;
-  grid-template-columns:1fr;
-}
-
-  
-       .zinkly-rounded-text{
-    width:100%;
-    max-width:250px;
-    text-align:left;
-  }
 
 
-       .artists-row{
-    grid-template-columns:1fr;
-  }
-
-    .nav-links {
-    left:20px;
-   right:20px;
-   width:auto;
-    display: none;          /* hide by default on small screens */
-    flex-direction: column;
-    gap:12px;
-    background:#111;
-    padding:16px;
-    position:absolute;
-    top:60px;               /* adjust for nav height */
-    right:20px;
-    border-radius:12px;
-    z-index:100;
-    
-  }
-
-    .nav-cta {
-  display: none;
-  }
-
-
-   .hero-eyebrow{
-    position:relative;
-    top:-100px;
-  }
-
-
-  .footer-inner{
-    grid-template-columns:1fr;
-    justify-items:center;
-    text-align:center;
-    gap:32px;
-    padding:0 20px;
-  }
-
-  .footer-col{
-    width:100%;
-    max-width:220px;
-  }
-
-   .categories-grid,
-  .artists-grid,
-  .steps-grid{
-    grid-template-columns:1fr;
-  }
-}
+ 
    /* Full-screen width section with rounded background */
 .zinkly-rounded-bg {
   width: 100%; /* or any width smaller than screen */
@@ -1119,7 +1104,124 @@ textarea.form-control{resize:none;height:130px}
   text-shadow: none;           /* remove all glow/blurry effect */
 }
 
-@media(max-width:375px){
+
+@media(max-width:480px){
+
+  .footer-col{
+    text-align: center;
+
+  }
+
+  .subscribe-cta{
+    padding: 65px 18px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .subscribe-cta h2{
+    font-size: 1.4rem;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .subscribe-cta p{
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .btn-subscribe{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 0.95rem;
+    border-radius: 50px;
+  }
+
+   html,
+  body{
+    overflow-x:hidden;
+  }
+
+  .container{
+    width:100%;
+    max-width:100%;
+    padding-left:16px;
+    padding-right:16px;
+    box-sizing:border-box;
+  }
+
+  .contact-layout{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+  }
+
+.form-row{
+ flex-direction:column;
+  gap:20px;
+}
+
+  .newsletter-row{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .newsletter-row input,
+  .newsletter-row button{
+    width:100%;
+  }
+
+  .contact-form{
+    width:100%;
+    max-width:100%;
+  }
+
+  .news-card{
+    width:100%;
+    max-width:100%;
+    flex-direction:column;
+    overflow:hidden;
+  }
+
+ .news-body{
+  font-size: x-small;
+ }
+
+  .news-card img{
+    width: 30% !important;
+    
+    height:auto;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .subscribe-cta{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+  }
+
+  .contact-methods{
+    width:100%;
+  }
+
+
+   .section-box-body {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+     .cta-banner{
+    flex-direction:column;
+    text-align:center;
+    width:100%;
+  }
+
    .fix {
     flex-wrap: wrap;
     gap: 18px;
@@ -1127,7 +1229,8 @@ textarea.form-control{resize:none;height:130px}
     margin-right: 0 !important;
     justify-content: center;
   }
-  
+ 
+
     .section-label{
    width:100%;
    max-width:200px;
@@ -1173,7 +1276,14 @@ textarea.form-control{resize:none;height:130px}
 
   }
 
+  .categories-grid{
+  display:grid; 
+grid-template-columns:1fr;
+
+} 
 }
+
+
 
 
 </style>
@@ -2766,7 +2876,7 @@ textarea.form-control{resize:none;height:130px}
 <!-- ═══════════════════════════════════════════════════════ -->
 <div class="page" id="page-contact">
   <!-- NEWSLETTER BAND -->
-  <div class="newsletter-band" style="padding-top:120px">
+  <div class="newsletter-band" style="padding-top:120px"; ;>
     <div class="container">
       <div class="section-label" style="text-align:center">Never Miss a Beat</div>
       <h3>Join the Zinkly <span style="color:var(--gold)">Community</span></h3>
@@ -2950,7 +3060,7 @@ textarea.form-control{resize:none;height:130px}
     <div class="news-card">
     <img src="assets/images/icons/ns-ltr.jpg" 
      alt="Featured News" 
-     style="width:150px; height:auto; border-radius:12px;">
+     style="width:40%;height:auto; border-radius:12px;">
       <div class="news-body">
         <h3>HELLO ZINKLY</h3>
         <p>Classic with your favorite color.</p>
@@ -3016,6 +3126,15 @@ document.addEventListener('click', (e) => {
   if (!clickedInsideMenu && !clickedHamburger) {
     navLinks.classList.remove('active');
   }
+
+});
+
+   /* CLOSE AFTER SELECTING MENU ITEM */
+document.querySelectorAll('.nav-links *').forEach(item => {
+
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
 
 });
 
