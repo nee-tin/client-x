@@ -921,9 +921,8 @@ textarea.form-control{resize:none;height:130px}
 /* ─── RESPONSIVE ───────────────────────────────── */
 /* TABLET */
 
- 
 
-@media (max-width:360px){
+ @media (min-width:361px) and (max-width:480px){
 
   .nav-links,
   .nav-cta{
@@ -1051,8 +1050,8 @@ textarea.form-control{resize:none;height:130px}
   }
 
      .cta-actions button{
-    padding:12px 20px !important;
-    font-size:14px !important;
+    padding:12px 20px;
+    font-size:14px ;
     width:auto;
     max-width:240px;
       margin: 0 auto;
@@ -1158,10 +1157,10 @@ textarea.form-control{resize:none;height:130px}
 }
 
  .profile-actions{
-    display:flex !important;
+    display:flex;
     flex-direction:column;
     align-items:center;
-    gap:12px !important;
+    gap:12px;
     
     width:100%;
   }
@@ -1175,11 +1174,11 @@ textarea.form-control{resize:none;height:130px}
   }
 
   .fix{
-    display:flex !important;
+    display:flex;
     flex-wrap:wrap;
     justify-content:center;
     text-align:center;
-    gap:16px !important;
+    gap:16px;
   }
 
   .profile-sections{
@@ -1203,9 +1202,9 @@ textarea.form-control{resize:none;height:130px}
 
   .hiw-step{
     display:flex;
-    flex-direction:column !important;
+    flex-direction:column;
 
-    align-items:center !important;
+    align-items:center;
     text-align:center;
 
     width:100%;
@@ -1247,7 +1246,7 @@ textarea.form-control{resize:none;height:130px}
   }
 
   .section-title{
-    font-size:32px !important;
+    font-size:32px;
     text-align:center;
   }
 
@@ -1368,7 +1367,97 @@ textarea.form-control{resize:none;height:130px}
   .profile-stat-label{
     font-size:10px;
   }
-       
+
+ .discography-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;      /* 👈 horizontal center */
+    justify-content:center;  /* 👈 vertical centering inside card */
+    text-align:center;
+    gap:12px;
+    width:100%;
+    padding:24px;
+  }
+
+  .disco-cover{
+    width:80px;
+    max-width:80px;
+  }
+
+  .disco-info{
+    width:100%;
+  }
+
+  .disco-apple{
+    width:auto;
+    max-width:150px;
+  }
+
+  
+  .profile-genre-tags{
+    max-width:100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+.section-box{
+  max-width: 300px;
+  width: 100%;
+  padding:16px
+}
+
+
+ 
+
+  .section-box-header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  padding:8px;
+}
+
+  .sec{
+  padding-left: 12px;
+  width:100%;
+  max-width: 80px;
+}
+  
+
+  .profile-bio{
+    font-size:12px;
+    line-height:1.6;
+    text-align: justify;
+    margin-bottom:14px;
+    word-break:break-word;
+    width:100%;
+    max-width:500px;
+  }
+
+  .profile-bio strong{
+    font-size:14px;
+    display:inline-block;
+    margin-bottom:4px;
+  }
+
+  .intro-highlight{
+    width: 100%;
+    max-width: 250px;
+    font-size: 16px;
+    text-align: center;
+    padding: 12px;
+     
+
+  }
+
+
+}
+
+
+
+
+
     @media (max-width:320px){
 
   .hero{
@@ -1387,11 +1476,77 @@ textarea.form-control{resize:none;height:130px}
     width: 100%;
    }
 
-   .profile-verified{
-    font-size:10px;
-    padding:5px 8px;
-    top:-6px;
+    .profile-verified{
+  display:inline-flex;
+  width:auto;
+  margin-top:-30px;
+  padding:2px 4px;
+}
+
+    #page-profile{
+    padding-top:150px;
+    margin-top: 10px;
   }
+   
+  
+    .profile-hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+     
+    width:100%;
+    padding:0 16px;
+    
+    gap:28px;
+
+    box-sizing:border-box;
+  }
+
+    .profile-hero > div{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+   
+  }
+
+
+  .profile-img{
+    width:140px;
+    height:140px;
+   }
+
+  .section-box-title{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 4px 18px;
+    max-width: 100px;
+  }
+  
+  .profile-genre-tags{
+    max-width:100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+.section-box-title{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 2px 4px;
+    max-width: 100px;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 14px;
+  }
+  
+.sec{
+  padding-left: 12px;
+  width:100%;
+  max-width: 60px;
+}
 
 }
 
@@ -2697,7 +2852,7 @@ textarea.form-control{resize:none;height:130px}
       <div class="section-box profile-section-full">
         <div class="section-box-header">
           <div class="section-box-title">⭐ Student Reviews <span style="color:var(--gold);margin-left:8px">4.98 / 5.0</span></div>
-          <div style="font-size:13px;color:var(--muted)">1,200+ reviews</div>
+          <div class="sec">1,200+ reviews</div>
         </div>
          <div class="section-box-body reviews-grid">   
           <div class="review-item">
