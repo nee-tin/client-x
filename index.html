@@ -199,7 +199,7 @@ nav.scrolled{
 .section-label{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 .section-title{font-family:var(--font-display);font-size:clamp(40px,5vw,68px);letter-spacing:1px;line-height:1.05}
 .section-title span{color:var(--gold)}
-.section-sub{color:var(--muted);font-size:17px;margin-top:16px;max-width:520px;line-height:1.7}
+.section-sub{color:var(--muted);font-size:17px;margin-top:8px;max-width:520px;line-height:1.7}
 
 .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#000;font-weight:700;font-size:14px;letter-spacing:0.5px;padding:14px 32px;border-radius:50px;transition:all .25s}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(245,166,35,0.4)}
@@ -321,10 +321,11 @@ nav.scrolled{
 
 /* CATEGORIES */
 .categories-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  justify-items: center;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+  padding-top: 8px;
+ margin-bottom: 8px; 
 }
 
 .cat-card{
@@ -332,7 +333,7 @@ nav.scrolled{
   flex-direction:column;
   align-items:center;
   text-align:center;
-  max-width:280px;
+   max-width:100%;
   width:100%;
     background:rgba(19,19,31,0.88);
 
@@ -340,7 +341,7 @@ nav.scrolled{
 
     border-radius:20px;
 
-    padding:38px 34px;
+    padding:20px 26px;
 
     transition:
         transform .35s ease,
@@ -1138,9 +1139,16 @@ textarea.form-control{resize:none;height:130px}
   
 }
 
- .categories-grid{
-    grid-template-columns: 1fr;
-    padding-top: 16px ;
+   .categories-grid{
+    grid-template-columns:1fr;
+    padding-top:16px;
+    width:100%;
+  }
+
+  .cat-card{
+    width:100%;
+    max-width:320px;
+    margin:0 auto;
   }
 
   .steps-grid{
@@ -1829,7 +1837,7 @@ c
   Explore Every <span>Musical Path</span>
 </div>
 
-<div class="section-sub">
+<div class="section-sub" style="padding-bottom: 12px;">
   From singing lessons with Grammy winners to DJ masterclasses with legendary producers — your journey starts here.
 </div>
 
