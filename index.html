@@ -2267,12 +2267,14 @@ c
   </div>
 
   <div class="artist-info">
+
     <div class="artist-name">TAYLOR SWIFT</div>
     <div class="artist-genre">Vocal · Pop / Country</div>
     <div style="margin-top:10px;display:flex;gap:8px">
       <span class="tag tag-gold">Featured</span>
       <span class="tag tag-pink">Pop Icon</span>
     </div>
+
     <div class="artist-stats">
       <div class="artist-stat"><strong>4.99</strong> Rating</div>
       <div class="artist-stat"><strong>1.5K</strong> Students</div>
@@ -2617,7 +2619,7 @@ c
 <div class="artist-card artist-focus" data-category="singing" onclick="showProfile('justinbieber')">
   <div class="artist-img-wrap">
     <div class="artist-avatar grad-8" style="height:240px">
-      <img src="assets/images/artists/justinbieber2.jpg" alt="Justin Bieber" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+      <img src="assets/images/artists/justin-bieber2.jpg" alt="Justin Bieber" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
     </div>
   </div>
   <div class="artist-info">
@@ -2988,13 +2990,18 @@ c
   <button class="btn-primary" onclick="showPage('booking')">✦ Book a Lesson</button>
   <button class="btn-outline">📩 Send Message</button>
   <button class="btn-outline">❤️ Follow</button>
-  <a href="https://www.instagram.com/zinklylive/" target="_blank" class="btn-outline" 
-    style="font-size:14px; padding:6px 12px; display:inline-flex; align-items:center;">
-    <img src="assets/images/icons/ns8-instagram-logo.png" 
-      alt="Instagram" 
-      style="width:28px; height:26px; margin-right:6px;" />
-              Instagram
-        </a>
+  <a id="artistInstagram"
+   href="#"
+   target="_blank"
+   class="btn-outline"
+   style="font-size:14px;padding:6px 12px;display:inline-flex;align-items:center;">
+
+    <img src="assets/images/icons/ns8-instagram-logo.png"
+         alt="Instagram"
+         style="width:28px;height:26px;margin-right:6px;">
+
+    Instagram
+</a>
         </div>
         <div class="fix" style="display:flex;gap:14px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border);">
         <div><div style="font-size:12px;color:var(--muted)">Response Rate</div><div style="font-weight:700;margin-top:4px;font-size:large">98%</div></div>
@@ -3874,7 +3881,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 
 
 
- /* =========================================
+/* =========================================
    ARTISTS DATA
 ========================================= */
 const artistsData = {
@@ -3902,6 +3909,8 @@ const artistsData = {
   lessonPrice: "Group: $3,000 / 1-on-1: $4,000",
   categories: ["Singing", "Songwriting", "Producing", "Stage presence"],
 
+   instagram: "https://www.instagram.com/arianagrande/", 
+  
   lessons: [
     { title: "1-on-1 Vocal Session", detail: "60 min · Online · Personalized feedback", price: "₹4,000", unit: "per session" },
     { title: "Group Masterclass", detail: "90 min · Online · Up to 8 students", price: "₹3,000", unit: "per student" },
@@ -3947,6 +3956,8 @@ const artistsData = {
     { title: "Performance & Stage Presence", detail: "45 min · Focus on live performance and persona", price: "₹3,800", unit: "per session" }
   ],
 
+  instagram: "https://www.instagram.com/feliciathegoat/?hl=en",
+
   discography: [
     { title: "Call Me If You Get Lost", meta: "Album · 2021 · 16 tracks", link: "https://music.apple.com/us/artist/tyler-the-creator/420368335", cover: "assets/images/discography/tyler/callmeifyougetlost.webp" },
     { title: "IGOR", meta: "Album · 2019 · 12 tracks", link: "https://music.apple.com/us/artist/tyler-the-creator/420368335", cover: "assets/images/discography/tyler/igor.jpg" },
@@ -3985,6 +3996,8 @@ kendrick: {
     { title: "Stage Performance & Persona", detail: "40 min · Online · Stage presence techniques", price: "₹4,000", unit: "per session" }
   ],
 
+  instagram: "https://www.instagram.com/kendricklamar/?hl=en",
+
   discography: [
     { title: "DAMN.", meta: "Album · 2017 · 14 tracks", link: "https://music.apple.com/us/artist/kendrick-lamar/368183298", cover: "assets/images/discography/kendrick-lamar/damn.webp" },
     { title: "To Pimp a Butterfly", meta: "Album · 2015 · 16 tracks", link: "https://music.apple.com/us/artist/kendrick-lamar/368183298", cover: "assets/images/discography/kendrick-lamar/to-pimp-a-butterfly.webp" },
@@ -4020,6 +4033,8 @@ xihibit: {
     { title: "Stage Performance", detail: "30 min · Online · Performance techniques", price: "₹2,200", unit: "per session" }
   ],
 
+instagram: "https://www.instagram.com/xzibit/?hl=en",
+
   discography: [
     { title: "City Lights", meta: "EP · 2022 · 5 tracks", link: "https://music.apple.com/us/artist/xzibit/106492", cover: "assets/images/discography/xihibit/city-lights.jpg " },
     { title: "Late Nights", meta: "Single · 2023 · 3 tracks", link: "https://music.apple.com/us/artist/xzibit/106492", cover: "assets/images/discography/xihibit/late-nights.jpg" }
@@ -4052,6 +4067,8 @@ sabrina: {
     { title: "Songwriting Workshop", detail: "40 min · Online · Lyrics & melody", price: "₹2,200", unit: "per session" },
     { title: "Stage Performance", detail: "30 min · Online · Live presence & confidence", price: "₹2,200", unit: "per session" }
   ],
+  
+  instagram: "https://www.instagram.com/sabrinacarpenter/",
 
   discography: [
     { title: "Singular: Act I", meta: "EP · 2018 · 6 tracks", link: "https://music.apple.com/us/artist/sabrina-carpenter/390647681", cover: "assets/images/discography/sabrina-carpenter/singular-1.webp" },
@@ -4093,6 +4110,8 @@ taylor: {
     { title: "Stage Performance & Presence", detail: "40 min · Online · Stage tips & delivery", price: "₹3,500", unit: "per session" }
   ],
 
+  instagram: "https://www.instagram.com/taylorswift/",
+
   discography: [
     { title: "Taylor Swift", meta: "Album · 2006 · 11 tracks", link: "https://music.apple.com/us/artist/taylor-swift/159260351", cover: "assets/images/discography/taylor-swift/taylor-swift.jpg" },
     { title: "Fearless", meta: "Album · 2008 · 13 tracks", link: "https://music.apple.com/us/artist/taylor-swift/159260351", cover: "assets/images/discography/taylor-swift/fearless.jpg" },
@@ -4131,6 +4150,8 @@ taylor: {
     { title: "Stage & Performance Coaching", detail: "40 min · Online · Stage presence", price: "₹3,500", unit: "per session" }
   ],
 
+  instagram: "https://www.instagram.com/mileycyrus/",
+
   discography: [
     { title: "Plastic Hearts", meta: "Album · 2020 · 12 tracks", link: "https://music.apple.com/us/artist/miley-cyrus/137057909", cover: "assets/images/discography/miley-cyrus/plastic-hearts.webp" },
     { title: "Younger Now", meta: "Album · 2017 · 15 tracks", link: "https://music.apple.com/us/artist/miley-cyrus/137057909", cover: "assets/images/discography/miley-cyrus/young-now.jpg" },
@@ -4165,6 +4186,9 @@ selena: {
     { title: "Songwriting & Storytelling", detail: "45 min · Online · Writing hits", price: "₹3,500", unit: "per session" },
     { title: "Stage Performance", detail: "40 min · Online · Confidence & stage tips", price: "₹3,500", unit: "per session" }
   ],
+
+  instagram: "https://www.instagram.com/selenagomez/",
+
     discography: [
     { title: "Rare", meta: "Album · 2020 · 13 tracks", link: "https://music.apple.com/us/artist/selena-gomez/280215834m", cover: "assets/images/discography/selena-gomez/rare.jpg" },
     { title: "Revival", meta: "Album · 2015 · 14 tracks", link: "https://music.apple.com/us/artist/selena-gomez/280215834", cover: "assets/images/discography/selena-gomez/revival.webp" },
@@ -4202,6 +4226,8 @@ dualipa: {
     { title: "Stage Presence & Performance", detail: "40 min · Online · Live performance tips", price: "₹3,500", unit: "per session" }
   ],
 
+  instagram: "https://www.instagram.com/dualipa/",
+
   discography: [
     { title: "Dua Lipa", meta: "Album · 2017 · 11 tracks", link: "https://music.apple.com/us/artist/dua-lipa/1031397873", cover: "assets/images/discography/dua-lipa/dua-lipa.webp" },
     { title: "Future Nostalgia", meta: "Album · 2020 · 11 tracks", link: "https://music.apple.com/us/artist/dua-lipa/1031397873", cover: "assets/images/discography/dua-lipa/future-nostalgia.webp" },
@@ -4238,6 +4264,8 @@ pitbull: {
     { title: "Songwriting & Production Workshop", detail: "45 min · Online · Creating hits", price: "₹3,500", unit: "per session" },
     { title: "Stage Performance & Branding", detail: "40 min · Online · Live tips & persona", price: "₹3,500", unit: "per session" }
   ],
+
+  instagram: "https://www.instagram.com/pitbull/?hl=en",
 
   discography: [
     { title: "M.I.A.M.I.", meta: "Album · 2004 · 19 tracks", link: "https://music.apple.com/us/artist/pitbull/27044968", cover: "assets/images/discography/pitbull/miami.webp" },
@@ -4278,6 +4306,8 @@ pitbull: {
     { title: "Performance & Stage Presence", detail: "40 min · Online · Live show tips", price: "₹3,500", unit: "per session" }
   ],
 
+  instagram: "https://www.instagram.com/blackpinkofficial/?hl=en",
+
   discography: [
     { title: "Square Up", meta: "EP · 2018 · 4 tracks", link: "https://music.apple.com/us/artist/blackpink/1141774019", cover: "assets/images/discography/black-pink/square-up.jpg" },
     { title: "Kill This Love", meta: "Single · 2019 · 4 tracks", link: "https://music.apple.com/us/artist/blackpink/1141774019", cover: "assets/images/discography/black-pink/kill-this-love.jpg" },
@@ -4314,6 +4344,8 @@ pitbull: {
     { title: "Songwriting & Production", detail: "45 min · Online · Writing hits", price: "₹3,500", unit: "per session" },
     { title: "Performance & Stage Presence", detail: "40 min · Online · Live performance techniques", price: "₹3,500", unit: "per session" }
   ],
+
+  instagram: "https://www.instagram.com/lilbieber/?hl=en",
 
   discography: [
     { title: "My World 2.0", meta: "Album · 2010 · 13 tracks", link: "https://music.apple.com/us/artist/justin-bieber/320569549", cover: "assets/images/discography/justin-bieber/my-world.jpg" },
@@ -4353,6 +4385,8 @@ pitbull: {
     { title: "Songwriting Workshop", detail: "40 min · Online · Latin pop style & hooks", price: "₹3,000", unit: "per session" }
   ],
 
+   instagram: "https://www.instagram.com/shakira/?hl=en",
+
   discography: [
     { title: "Laundry Service", meta: "Album · 2001 · 13 tracks", link: "https://music.apple.com/us/artist/shakira/889327", cover: "assets/images/discography/shakira/laundry-service.jpg" },
     { title: "Fijación Oral Vol. 1", meta: "Album · 2005 · 12 tracks", link: "https://music.apple.com/us/artist/shakira/889327", cover: "assets/images/discography/shakira/fijacion-oral-vol-1.jpg" },
@@ -4389,6 +4423,8 @@ olivia: {
     { title: "Songwriting Session", detail: "40 min · Online · Lyrics & hooks", price: "₹2,500", unit: "per session" },
     { title: "Stage Presence Coaching", detail: "30 min · Online · Performance skills", price: "₹2,500", unit: "per session" }
   ],
+
+  instagram: "https://www.instagram.com/oliviarodrigo/",
 
   discography: [
     { title: "SOUR", meta: "Album · 2021 · 11 tracks", link: "https://music.apple.com/us/artist/olivia-rodrigo/979458609", cover: "assets/images/discography/olivia-rodrigo/sour.webp" },
@@ -4427,6 +4463,8 @@ ellie: {
     { title: "Stage Performance & Presence", detail: "40 min · Online · Live performance techniques", price: "₹3,500", unit: "per session" }
   ],
 
+  instagram: "https://www.instagram.com/elliegoulding/?hl=en",
+
   discography: [
     { title: "Lights", meta: "Album · 2010 · 13 tracks", link: "https://music.apple.com/us/artist/ellie-goulding/338264227", cover: "assets/images/discography/ellie-goulding/lights.webp" },
     { title: "Halcyon", meta: "Album · 2012 · 13 tracks", link: "https://music.apple.com/us/artist/ellie-goulding/338264227", cover: "assets/images/discography/ellie-goulding/halcyon.jpg" },
@@ -4464,6 +4502,8 @@ jcole: {
     { title: "Songwriting & Production Workshop", detail: "45 min · Online · Beat making & lyric writing", price: "₹3,500", unit: "per session" },
     { title: "Stage Performance & Presence", detail: "40 min · Online · Live performance techniques", price: "₹3,500", unit: "per session" }
   ],
+ 
+  instagram: "https://www.instagram.com/thejcolebible/?hl=en",
 
   discography: [
     { title: "Cole World: The Sideline Story", meta: "Album · 2011 · 16 tracks", link: "https://music.apple.com/us/artist/j-cole/73705833", cover: "assets/images/discography/j-cole/cole-world.png" },
@@ -4503,6 +4543,8 @@ tate: {
     { title: "Performance & Dance", detail: "30 min · Online · Stage tips & choreography", price: "₹2,500", unit: "per session" }
   ],
 
+  instagram: "https://www.instagram.com/tatemcrae/?hl=en",
+
   discography: [
     { title: "All The Things I Never Said", meta: "EP · 2020 · 7 tracks", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/all-the-things-i-never-said.png" },
     { title: "Too Young To Be Sad", meta: "EP · 2021 · 6 tracks", link: "https://music.apple.com/us/artist/tate-mcrae/1446365464", cover: "assets/images/discography/tate-mc-ray/Too-young-to-be-sad.webp" },
@@ -4524,6 +4566,10 @@ function showProfile(artistKey) {
   if (!profilePage || !artistsData[artistKey]) return;
 
   const artist = artistsData[artistKey];
+
+   // Update Instagram link
+  document.getElementById("artistInstagram").href = artist.instagram;
+
 
   // -------------------------------
   // Update profile image
