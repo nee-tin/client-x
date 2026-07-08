@@ -1032,7 +1032,7 @@ textarea.form-control{resize:none;height:130px}
 /***************************************************************************************/
 
 
- @media (min-width:361px) and (max-width:480px){
+ @media (min-width:300px) and (max-width:560px){
 
   .nav-links,
   .nav-cta{
@@ -1042,6 +1042,15 @@ textarea.form-control{resize:none;height:130px}
   .menu-toggle{
     display:block;
   }
+
+  .artists-grid{
+    align-items: center;
+    padding-left: 34px;
+    margin-left: 34px;
+    margin-bottom: 80px;
+  
+  }
+ 
 
 .nav-links.active{
     display: flex;
@@ -1201,12 +1210,25 @@ textarea.form-control{resize:none;height:130px}
    span.intro-highlight{
     display: flex;
     
-     font-size: 17px;
-     max-width: 350px;
+     font-size: 16px;
+     max-width: 200px;
        
    }
 
+ .zinkly-rounded-text{
+       font-size: 16px;
+       max-width: 200px;   
+
+   }
+  
+
+
    /* Artist Profile */
+
+   .artist-card{
+   max-width: 270px ;
+
+   }
 
  .profile-verified{
   display:inline-flex;
@@ -1244,15 +1266,7 @@ textarea.form-control{resize:none;height:130px}
     align-items:center;
    
   }
-
   
- 
-
-  .profile-img{
-    width:250px;
-    height:350px;
-    
-   }
 
   .profile-stats{
     display:flex;
@@ -1372,7 +1386,6 @@ textarea.form-control{resize:none;height:130px}
     grid-template-columns:1fr;
   }
 
-c
 
   .contact-method{
     flex-direction:column;
@@ -1406,7 +1419,7 @@ c
   flex-shrink:0;
 }
 
- c
+ 
     .contact-info h2{
     font-size:28px;
     line-height:1.2;
@@ -1429,8 +1442,6 @@ c
   }
 
     
-
-
   .subscribe-cta{
     padding:20px;
     margin:30px 12px;
@@ -1525,8 +1536,6 @@ c
 }
 
 
- 
-
   .section-box-header{
   display:flex;
   flex-direction:column;
@@ -1558,187 +1567,24 @@ c
     margin-bottom:4px;
   }
 
-  
-
-
-  }
-
-
-
-
-
-/**********************************/
-
-
-    @media (max-width:320px){
-
-      .nav-links,
-  .nav-cta{
-    display:none;
-  }
+ span.intro-highlight{
+  padding-top: 40px;
+  padding-bottom: -40px;
+ }
  
-  .menu-toggle{
-    display:block;
+
+
   }
 
-.nav-links.active{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: var(--bg2);
-    padding: 16px;
-    border-radius: 12px;
-    gap: 12px;
-  }
 
-  .hero{
-    padding-top:80px;
-    padding-left:6px;
-    padding-right:6px;
-    margin:0 auto;
-  }
+
+
+
+ 
+ 
 
  
 
-.hero-eyebrow{
-    text-align: center;
-    font-size:1px;
-    gap:6px;
-    max-width:250px;
-    padding-right: 8px;
-  }
-
- 
-  .hero-content{
-    grid-template-columns:1fr;
-    
-    width: 100%;
-    justify-items:center;
-    align-items:center;
-     padding-right: 12px;
-  }
-
-  .hero-content > div{
-    max-width:230px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    padding-right: 8px;
-    padding-top: 12px;
-  }
-
-    
-
-  .hero-desc{
-     
-    text-align: center;
-    padding:0px 32px;
-    font-size: 16px;
-    width: 100%;
-    align-items: center;
-    align-self: center;
-    text-align: center;
-    
-    
-  }
-
- .hero-actions{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-
-     .hero-actions button{
-  width: auto;
-  max-width: 280px;
-  display:inline-flex;
-    padding:10px 16px;
-  
-}
-
-   .btn-outline{
-    width: 100%;
-   }
-
-    .profile-verified{
-  display:inline-flex;
-  width:auto;
-  margin-top:-14px;
-  padding:2px 4px;
-}
-
-    #page-profile{
-    padding-top:150px;
-    margin-top: 10px;
-  }
-   
-  
-    .profile-hero{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-     
-    width:100%;
-    padding:0 16px;
-    
-    gap:28px;
-
-    box-sizing:border-box;
-  }
-
-    .profile-hero > div{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-   
-  }
-
-
-   .profile-img{
-    width:180px;
-    height:300px;
-    
-   }
-  .section-box-title{
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    padding: 4px 18px;
-    max-width: 100px;
-  }
-  
-  .profile-genre-tags{
-    max-width:100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-.section-box-title{
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    padding: 2px 4px;
-    max-width: 100px;
-    justify-content: space-between;
-    gap: 8px;
-    padding: 14px;
-  }
-  
-.sec{
-  padding-left: 12px;
-  width:100%;
-  max-width: 60px;
-}
-
- 
-
-}
 
  
 
@@ -2520,6 +2366,34 @@ c
       <div class="artist-stat"><strong>4.99</strong> Rating</div>
       <div class="artist-stat"><strong>1.5K</strong> Students</div>
       <div class="artist-stat"><strong>$4,200</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- KELSEA --->
+
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('kelsea')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/kelsea-2.webp" alt="Kelsea Ballerini" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+
+  <div class="artist-info">
+    <div class="artist-name">Kelsea Ballerini</div>
+    <div class="artist-genre">Vocal · Country/Pop</div>
+
+    <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink">Country Star</span>
+    </div>
+
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>4.98</strong> Rating</div>
+      <div class="artist-stat"><strong>1.2K</strong> Students</div>
+      <div class="artist-stat"><strong>$4,500</strong>/hr</div>
     </div>
   </div>
 </div>
@@ -4611,6 +4485,82 @@ omarion: {
       meta: "Album · 2014 · 13 tracks",
       link: "https://music.apple.com/us/album/sex-playlist/942089565",
       cover: "assets/images/discography/omarion/sexplaylist.jpg"
+    }
+  ]
+},
+
+kelsea: {
+  name: "Kelsea Ballerini",
+  profileImg: "assets/images/artists/kelsea.jpg",
+
+  bio: `
+    <p><strong>Career & Background :</strong><br>
+    Kelsea Ballerini is an American country-pop singer, songwriter, and performer. She gained recognition with her debut album, <em>The First Time</em>, becoming one of the youngest female artists to achieve multiple consecutive No. 1 country singles. Her music blends modern country with pop influences and heartfelt storytelling.</p>
+
+    <p><strong>Awards & Accolades :</strong><br>
+    Kelsea has received multiple Academy of Country Music (ACM) Awards, CMT Music Awards, and has earned Grammy Award nominations. She is widely recognized as one of the leading voices in contemporary country music.</p>
+
+    <p><strong>Hit Songs & Achievements :</strong><br>
+    Some of her biggest hits include "Love Me Like You Mean It", "Peter Pan", "Miss Me More", "Hole in the Bottle", and "Half of My Hometown". She has headlined successful tours and collaborated with major artists across country and pop music.</p>
+  `,
+
+  lessonDuration: "30 minutes",
+  lessonPrice: "Group: $1,800 / 1-on-1: $2,400",
+
+  categories: [
+    "Country Singing",
+    "Songwriting",
+    "Stage Performance"
+  ],
+
+  lessons: [
+    {
+      title: "1-on-1 Country Vocal Coaching",
+      detail: "30 min · Online · Vocal technique & expression",
+      price: "₹2,400",
+      unit: "per session"
+    },
+    {
+      title: "Country Songwriting Workshop",
+      detail: "45 min · Online · Lyrics & melody writing",
+      price: "₹2,100",
+      unit: "per session"
+    },
+    {
+      title: "Live Performance Coaching",
+      detail: "30 min · Online · Stage confidence & audience engagement",
+      price: "₹2,000",
+      unit: "per session"
+    }
+  ],
+
+  instagram: "https://www.instagram.com/kelseaballerini/",
+
+  discography: [
+    {
+      title: "The First Time",
+      meta: "Album · 2015 · 12 tracks",
+      link: "https://music.apple.com/us/album/rolling-up-the-welcome-mat-for-good/1699853259",
+      cover: "assets/images/discography/kelsea-ballerini/the first time.jpg"
+    },
+    {
+      title: "Unapologetically",
+      meta: "Album · 2017 · 12 tracks",
+      link: "https://music.apple.com/us/album/unapologetically/1437980659?i=1437980951",
+      cover: "assets/images/discography/kelsea-ballerini/unapologetically.webp"
+    },
+    {
+      title: "Kelsea",
+      meta: "Album · 2020 · 13 tracks",
+      link: "https://music.apple.com/us/album/kelsea/1492761620",
+      cover: "assets/images/discography/kelsea-ballerini/kelsea-album.jpg"
+    },
+    
+    {
+      title: "Rolling Up the Welcome Mat",
+      meta: "EP · 2023 · 6 tracks",
+      link: "https://music.apple.com/us/album/rolling-up-the-welcome-mat-ep/1668471788",
+      cover: "assets/images/discography/kelsea-ballerini/rolling up the welcome mat.jpg"
     }
   ]
 },
