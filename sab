@@ -4104,7 +4104,15 @@ Her chart-topping hits include "Nonsense," "Feather," "Espresso," and "Please Pl
   meta: "Single · 2025",
   link: "https://music.apple.com/search?term=Manchild+Sabrina+Carpenter",
   cover: "assets/images/discography/sabrina-carpenter/manchild.webp"
-}
+},
+
+{
+  title: "House Tour",
+  meta: "Song · 2025 · Man's Best Friend",
+  link: "https://music.apple.com/us/album/house-tour/1819861154?i=1819861170",
+  cover: "assets/images/discography/sabrina-carpenter/house-tour.jpg"
+},
+
   ],
   reviews: [
   {
