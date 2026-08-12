@@ -201,7 +201,7 @@ nav.scrolled{
 .section-title span{color:var(--gold)}
 .section-sub{color:var(--muted);font-size:17px;margin-top:8px;max-width:520px;line-height:1.7}
 
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#000;font-weight:700;font-size:14px;letter-spacing:0.5px;padding:14px 32px;border-radius:50px;transition:all .25s}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#000;font-weight:700;font-size:14px;letter-spacing:0.5px;padding:14px 32px;border-radius:50px;transition:all .25s;margin-right:px}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(245,166,35,0.4)}
 .btn-outline{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,0.2);color:var(--white);font-weight:500;font-size:14px;padding:14px 32px;border-radius:50px;transition:all .25s}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
@@ -266,20 +266,25 @@ nav.scrolled{
 .hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 65% 40%,rgba(232,56,122,0.15) 0%,transparent 70%)}
 .hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 50% at 30% 60%,rgba(245,166,35,0.08) 0%,transparent 60%)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%)}
-.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto;padding:0 40px;width:100%}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1150px;margin:0 auto;padding:0 40px;width:100%;}
 .hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:40px;}
-.hero-eyebrow-line{width:40px;height:1px;background:var(--gold)}
-.hero-eyebrow span{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600}
+.hero-eyebrow-line{width:26px;height:1px;background:var(--gold);margin-bottom: 100px;}
+.hero-eyebrow span{font-size:28px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;padding-bottom: 50px;max-width:500px;text-align: center;margin-left:-82px;}
 .hero-h1{font-family:var(--font-display);font-size:clamp(52px,7vw,96px);line-height:0.95;letter-spacing:1px}
 .hero-h1 .line2{color:var(--gold)}
-.hero-h1 .line3{font-family:var(--font-serif);font-style:italic;color:var(--muted);font-size:clamp(36px,4.5vw,64px)}
+.hero-h1 .line3{font-family:var(--font-serif);font-style:italic;color:var(--muted);font-size:clamp(36px,4.5vw,64px);margin-right:40px;}
 .hero-desc{color:var(--muted);font-size:17px;line-height:1.7;margin:28px 0 40px;max-width:460px}
+ 
 .hero-actions{
   flex-wrap:wrap;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+}
+
+.hero-actions.fade-up-4{
+    max-width:400px;
 }
 
 .hero-actions{
@@ -868,6 +873,8 @@ textarea.form-control{resize:none;height:130px}
   text-align:center;
   padding-bottom:16px;
 }
+
+ 
 
 
 
@@ -1567,17 +1574,11 @@ textarea.form-control{resize:none;height:130px}
     margin-bottom:4px;
   }
 
+  .hero-eyebrow span{font-size:20px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;padding-bottom: 50px;max-width:500px;text-align: center;}
+
+
 
   }
-
-
-
-
-
- 
- 
-
- 
 
 
  
@@ -2175,6 +2176,8 @@ textarea.form-control{resize:none;height:130px}
   </div>
 </div>
 
+ 
+
 
 <!-- TYLER-->
 <div class="artist-card artist-focus" data-category="singing" onclick="showProfile('tyler')">
@@ -2197,6 +2200,7 @@ textarea.form-control{resize:none;height:130px}
     </div>
   </div>
 </div>
+
 
 
 <!--Jcole---->
@@ -2288,6 +2292,29 @@ textarea.form-control{resize:none;height:130px}
     <div class="artist-stats">
       <div class="artist-stat"><strong>4.99 ⭐</strong> Rating</div>
       <div class="artist-stat"><strong>2K</strong> Students</div>
+      <div class="artist-stat"><strong>$5,000</strong>/hr</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SZA-->
+<div class="artist-card artist-focus" data-category="singing" onclick="showProfile('sza')">
+  <div class="artist-img-wrap">
+    <div class="artist-avatar grad-1" style="height:240px">
+      <img src="assets/images/artists/sza-2.jpg" alt="sza" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+    </div>
+  </div>
+   <div class="artist-info">
+    <div class="artist-name">SZA</div>
+    <div class="artist-genre">Hip-Hop/Rap </div>
+     <div style="margin-top:10px;display:flex;gap:8px">
+      <span class="tag tag-gold">Featured</span>
+      <span class="tag tag-pink"> Icon</span>
+    </div>
+    <div class="artist-stats">
+      <div class="artist-stat"><strong>4.99 ⭐</strong> Rating</div>
+      <div class="artist-stat"><strong>1.5K</strong> Students</div>
       <div class="artist-stat"><strong>$5,000</strong>/hr</div>
     </div>
   </div>
@@ -3919,6 +3946,108 @@ reviews: [
 },
 
 
+sza: {
+  name: "SZA",
+  profileImg: "assets/images/artists/sza.png",
+  bio: `
+ <p><strong>Career & Background :</strong><br>
+SZA is an American singer, songwriter, and performer known for her distinctive R&B sound, emotionally honest songwriting, and expressive vocals. Born Solána Imani Rowe, she emerged as one of the defining voices of contemporary R&B, blending soul, hip-hop, alternative music, and atmospheric production into her own distinctive style.</p>
+
+<p><strong>Awards & Accolades :</strong><br>
+SZA has earned major recognition throughout her career, including multiple Grammy Awards and numerous Grammy nominations. Her music has received widespread critical acclaim, while her songwriting and vocal performances have established her as one of the most influential R&B artists of her generation.</p>
+
+<p><strong>Musical Success :</strong><br>
+Her breakthrough album <em>Ctrl</em> introduced her deeply personal songwriting to a global audience, while <em>SOS</em> expanded her sound and commercial success with songs such as <em>Kill Bill</em>, <em>Snooze</em>, <em>Shirt</em>, and <em>Nobody Gets Me</em>. Her music continues to explore relationships, self-discovery, vulnerability, confidence, and personal growth.</p>
+
+<p><strong>Hit Songs & Achievements :</strong><br>
+SZA's major songs include <em>Good Days</em>, <em>Love Galore</em>, <em>Broken Clocks</em>, <em>All The Stars</em>, <em>Kill Bill</em>, <em>Snooze</em>, <em>Nobody Gets Me</em>, and <em>Saturn</em>. Her work has made her one of the leading contemporary voices in R&B and an inspiration to emerging singers and songwriters.</p>
+  `,
+  lessonDuration: "25 minutes",
+  lessonPrice: "Group: $ / single: $",
+  categories: ["Singing", "Songwriting", "Stage presence"],
+
+  lessons: [
+    { title: "1-on-1 Songwriting Session", detail: "40 min · Online · Personalized feedback", price: "", unit: "per session" },
+    { title: "Group Vocal & R&B Workshop", detail: "90 min · Online · Up to 6 students", price: "", unit: "per student" },
+    { title: "Performance & Stage Presence", detail: "45 min · Focus on live performance and persona", price: "", unit: "per session" }
+  ],
+
+  instagram: "https://www.instagram.com/sza/",
+
+  discography: [
+    {
+      title: "SOS Deluxe: LANA",
+      meta: "Album · 2025 · 42 tracks",
+      link: "https://music.apple.com/us/album/sos-deluxe-lana/1794644675",
+      cover: "assets/images/discography/sza/lana.webp"
+    },
+    {
+      title: "SOS",
+      meta: "Album · 2022 · 23 tracks",
+      link: "https://music.apple.com/us/album/sos/1657869377",
+      cover: "assets/images/discography/sza/sos.webp"
+    },
+    {
+      title: "Ctrl",
+      meta: "Album · 2017 · 14 tracks",
+      link: "https://music.apple.com/us/album/ctrl-deluxe/1628387909",
+      cover: "assets/images/discography/sza/ctrl.webp"
+    },
+    {
+      title: "Z",
+      meta: "EP · 2014 · 10 tracks",
+      link: "https://music.apple.com/us/album/z-ep/852343474",
+      cover: "assets/images/discography/sza/z.jpg"
+    },
+    {
+      title: "Saturn",
+      meta: "Single · 2024",
+      link: "https://music.apple.com/us/album/saturn/1732348411?i=1732348414",
+      cover: "assets/images/discography/sza/saturn.webp"
+    },
+    {
+      title: "Good Days",
+      meta: "Single · 2020",
+      link: "https://music.apple.com/us/album/good-days/1658650093?i=1658650802",
+      cover: "assets/images/discography/sza/gooddays.jpg"
+    },
+    {
+      title: "I Hate U",
+      meta: "Single · 2021",
+      link: "https://music.apple.com/us/album/i-hate-u/1786643044?i=1786643502",
+      cover: "assets/images/discography/sza/ihateu.webp"
+    }
+  ],
+
+  reviews: [
+    {
+      name: "Priya Sharma",
+      time: "2 weeks ago",
+      rating: "★★★★★",
+      text: "SZA's approach to songwriting helped me understand how to turn real emotions into meaningful lyrics."
+    },
+    {
+      name: "Kenji Tanaka",
+      time: "1 month ago",
+      rating: "★★★★★",
+      text: "The vocal exercises were practical and helped me become much more confident with my performance."
+    },
+    {
+      name: "Aisha Mbeki",
+      time: "6 weeks ago",
+      rating: "★★★★★",
+      text: "Her songwriting perspective made every lesson creative, personal, and inspiring."
+    },
+    {
+      name: "Carlos Mendez",
+      time: "2 months ago",
+      rating: "★★★★★",
+      text: "I learned how to express emotion through my voice while developing a stronger stage presence."
+    }
+  ]
+},
+
+
 kendrick: {
   name: "Kendrick Lamar",
   profileImg: "assets/images/artists/kendrik.jpg",
@@ -4059,7 +4188,7 @@ instagram: "https://www.instagram.com/xzibit/?hl=en",
 
 sabrina: {
   name: "Sabrina Carpenter",
-  profileImg: "assets/images/artists/sabrina.webp",
+  profileImg: "assets/images/artists/sabrina.jpg",
   bio: `
  <p><strong>Career & Background :</strong><br>
 Sabrina Carpenter is an American singer, songwriter, and actress who has grown into one of pop music's biggest stars. After beginning her career on Disney Channel, she established herself as a successful recording artist through her distinctive vocals, songwriting, and energetic live performances.</p>
