@@ -1,5 +1,5 @@
 # Zinkly Artist Platform
-* View Page:  https://nee-tin.github.io/client-x/
+* View Page:  https://nee-tin.github.io/client-z/
 ## Overview
 
 Responsive artist and music platform developed for a client project. The work focused on improving artist presentation, lesson information, pricing visibility, and mobile responsiveness.
